@@ -20,6 +20,11 @@ function Register() {
         })
         .catch(error => alert(error.message))
     }
+    const inputStyle = {
+        width: '100%', // 100% width
+        marginBottom: '20px', // 20px margin-bottom
+        // Add more styles as needed
+    };
 
     const createAccount = e => {
         e.preventDefault();

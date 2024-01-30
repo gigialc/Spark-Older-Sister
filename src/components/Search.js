@@ -171,14 +171,14 @@ function Search() {
 
 export default Search;
 
-  
+  // This is the API key for the Google PSE - Google cloud 
 
-/*
 
-fetch('https://www.googleapis.com/customsearch/v1?key=INSERT_YOUR_API_KEY&cx=017576662512468239146:omuauf_lfve&q=lectures')
 
-.then(response => response.json())
+// fetch('https://www.googleapis.com/customsearch/v1?key=INSERT_YOUR_API_KEY&cx=017576662512468239146:omuauf_lfve&q=lectures')
 
-.then(data => console.log(data))
+// .then(response => response.json())
 
-.catch(error => console.error(error));*/
+// .then(data => console.log(data))
+
+// .catch(error => console.error(error));
