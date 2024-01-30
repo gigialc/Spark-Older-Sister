@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .survey{
-  background: linear-gradient(to right, #A473E6, #9DB7FD, #87FAE7);
+  background: #FFEDFD;
   height:100vh;
   width:100vw;
   overflow: hidden;

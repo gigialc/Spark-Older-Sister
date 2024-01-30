@@ -43,7 +43,7 @@ function Register() {
         <body>
         <div className={styles.container}>
             <div className={styles.logo2}>
-             <h1>Stake The Stigma.</h1>
+             <h1>Older Sister.</h1>
              </div>
             <div className={styles.right}>
                 <form>
@@ -67,7 +67,7 @@ function Register() {
                                      />
                     </div>
                     <div className = {styles.passwordInput}>
-                        <h4 className= {styles.logo3}> Password</h4>
+                        {/* <h4 className= {styles.logo3}> Password</h4> */}
                         <input type = "password" value = {password} onChange = {e => {setPassword(e.target.value)}} className = {styles.password} />
                     </div>
 
@@ -78,7 +78,7 @@ function Register() {
                 <button className={styles.registerButton} onClick={createAccount}>Create an account</button>
             </div>
             <div className={styles.slogan}>
-                <h2>_destigmatizing women's health_</h2>
+                {/* <h2>_destigmatizing women's health_</h2> */}
             </div>
         </div>
         </body>

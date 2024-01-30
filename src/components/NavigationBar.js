@@ -107,7 +107,7 @@ function NaviBar() {
       <main > 
        
           <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ background: 'linear-gradient(to right, #A473E6, #9DB7FD, #87FAE7)', shadow:'none', height:'80px'}}>
+      <AppBar position="static" sx={{background: "#FFEDFD", shadow:'none', height:'80px'}}>
         <StyledToolbar>
           <IconButton
             size="large"
@@ -137,8 +137,8 @@ function NaviBar() {
             </StyledPaper>
           </Search>
           <div className= {styles.logos}> 
-            <h1 className={styles.logo1}>Stake The Stigma.</h1>
-            <h2 className={styles.logo2}>Destigmatizing Women's Health</h2>
+            <h1 className={styles.logo1}>Older Sister.</h1>
+            {/* <h2 className={styles.logo2}>Destigmatizing Women's Health</h2> */}
           </div>
         </StyledToolbar>
       </AppBar>

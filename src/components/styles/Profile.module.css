@@ -35,7 +35,7 @@
     margin-left: 2em;
 
     
-    background: rgba(255, 255, 255, 0.6);
+    background: #FFEDFD;
     border: 2px solid #3A448C;
     border-radius: 999px;
   }
@@ -130,7 +130,8 @@ main.Profile{
     position: fixed;
     height: 100px;
     width: 100%; 
-    background: linear-gradient(to right, #A473E6, #9DB7FD, #87FAE7);
+    background: #FFEDFD;
+    background-color: #FFEDFD;
     
   }
   
@@ -222,7 +223,6 @@ main.Profile{
   }
   
 body {
-	/* background: #048; */
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 300;
