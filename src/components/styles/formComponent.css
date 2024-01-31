@@ -20,11 +20,11 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 42px;
-  color: white;
+  color: #D4473B;
   }
 .contribute{
   margin-top: 20px;
-  color: #3A448C;
+  color:#D4473B ;
   font-family: 'Montserrat';
 }
 .subtitle{
@@ -42,7 +42,7 @@
   line-height: 43px;
   text-align: right;
   
-  color: #FFFFFF;
+  color: #D4473B;
 }
 .overall{
   display: flex;
@@ -64,7 +64,7 @@
 
 }
 .contributeTitle{
-  color: #3A448C;
+  color: #D4473B;
   font-family: 'Montserrat';
   position: relative;
   left: 0.5%;
@@ -86,7 +86,7 @@
   flex-direction: column;
   top: 2.5rem;
   left:5rem;  
-  color: #3A448C;
+  color: #D4473B;
   font-family: 'Montserrat';
   font-weight: 700;
 }
@@ -94,7 +94,7 @@
 .surveyLabel2{
   top: 2.5rem;
   left:5rem;  
-  color: #3A448C;
+  color: #D4473B;
   font-family: 'Montserrat';
   font-weight: 700;
 }
@@ -119,7 +119,7 @@
 
 .topics h1{
   margin-left: 10px;
-  color: #3A448C;
+  color: #D4473B;
 }
 
 /* .other-topic{
@@ -141,7 +141,7 @@
   height: 30px;
   border-radius: 20px;
   background-color: transparent;
-  border-color: #3A448C;
+  border-color: #D4473B;
 }
 .contributorInput2{
   margin-bottom: 20px;
@@ -149,7 +149,7 @@
   height: 150px;
   border-radius: 20px;
   background-color: transparent;
-  border-color: #3A448C;
+  border-color: #D4473B;
 }
 .contributorBack {
   z-index: 100;
@@ -157,7 +157,7 @@
   top: 20%;
   right: 10%;
   padding: 10px 20px;
-  background-color: #3A448C;
+  background-color: #D4473B;
   color: white;
   font-family: 'Montserrat';
   font-weight: 700;
@@ -168,7 +168,7 @@
 }
 
 .contributorBack:hover {
-  background-color: #2B2F6E;
+  background-color: #D4473B;
   transform: scale(1.1); /* add transform effect */
 }
 

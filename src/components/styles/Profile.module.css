@@ -87,6 +87,7 @@
 .logo1{
   font-family: 'Georgia', sans-serif;
   margin-bottom: -15px;
+  color: #D4473B;
 }
 
 .logo2{
@@ -120,7 +121,7 @@ main.Profile{
     height: 80%;
     width: 100%;
     justify-content: space-between;
-    background-color: white;
+    background-color: #D4473B;
 
   }
 
@@ -161,7 +162,7 @@ main.Profile{
 
   .logo {
     font-size: 40px;
-    color: white;
+    color: #D4473B;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -171,13 +172,13 @@ main.Profile{
   }
 
   .slogan {
-    color: white;
+    color: #D4473B;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     font-size: 20px;
 
-    color: #FFFFFF;
+    color: #D4473B;
 
     top: 35px;
     right: 3%;

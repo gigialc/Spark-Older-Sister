@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useNavigate } from 'react-router-dom'
+import { pink } from '@mui/material/colors';
 
 function FormComponent() {
   const [title, setTitle] = useState('');
@@ -58,11 +59,11 @@ function FormComponent() {
         <h2 className="subtitle">Destigmatizing Women's Health</h2>
       </header>
        */}
-      <NaviBar className="heading" />
+      <NaviBar className="heading"  sx={{ }}/>
       <button onClick={()=>navigate("/dashboard")}className="contributorBack">Back</button>
       <div className= "overall"> 
         <div className = "contributorIcon">
-          <AccountCircleIcon sx={{ fontSize: 125, marginLeft: '2px' }} />
+          <AccountCircleIcon sx={{ fontSize: 125, marginLeft: '2px' , color: pink}} />
         </div>
       <div className="content">
           <h1 className= "contributeTitle">Contribute</h1> 
@@ -124,7 +125,7 @@ function FormComponent() {
     width: "200px",
     height: "50px",
     borderRadius: "999px",
-    backgroundColor: "#3A448C",
+    backgroundColor: "#D4473B",
     fontWeight:"bold",
     transition: "transform 0.3s ease-in-out", // add transition
     "&:hover": {
@@ -134,7 +135,7 @@ function FormComponent() {
     },
   }}
 >
-  Submit
+  Submit 
 </Button>
 
     </div>
@@ -151,7 +152,7 @@ function StyledChip(props) {
       variant="outlined"
       {...rest}
       sx={[
-        clicked ? { backgroundColor: "#59515e", color: "white" } : { backgroundColor: "white", color: "black" },
+        clicked ? { backgroundColor: "#59515e", color: "#D4473B "} : { backgroundColor: "white", color: "black" },
         { margin: 1 },
         
       ]}

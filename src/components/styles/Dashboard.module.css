@@ -22,16 +22,19 @@
   flex-direction: column;
   align-items: flex-end;
   left: 70%;
+  color: #D4473B;
 }
 
 .logo1{
   font-family: 'Georgia', sans-serif;
   margin-bottom: -15px;
+  color: #D4473B;
 }
 
 .logo2{
   font-family: 'Montserrat', sans-serif;
   font-size: 23px;
+  color: #D4473B;
 }
 .contributorBtn{
   position: absolute;
