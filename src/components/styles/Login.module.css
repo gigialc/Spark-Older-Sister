@@ -1,6 +1,102 @@
+/* Existing styles */
 /* regular montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+}
+
+.container{
+  height: 100vh;
+  background: #FFEDFD ;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:  auto;
+  grid-template-areas:
+  ". . . "
+  "l . . "
+  "ll . r"
+  ". slogan . "
+
+}
+
+
+.logo1{
+  grid-area: l;
+  align-self: end;
+  justify-self: start;
+}
+
+.logo2{
+  grid-area: ll;
+  align-self: center;
+  justify-self: left;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  font-family: 'Georgia', sans-serif;
+  color: #D4473B;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 120px;
+
+
+}
+.logo3{
+  color: #D4473B;
+  position: absolute;
+  left: 100px;
+  font-size: 35px;
+  top: 73%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.right{
+  grid-area: r;
+  padding-bottom: 50px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 100px;
+}
+
+/* this is outside of the grid cuz it dont fit and idk how to fix it  */
+.slogan{
+  grid-area: slogan;
+  /*
+  position: absolute;
+  bottom: 0;*/
+  width: 110%;
+  justify-self: center;
+  font-size: 18px;
+  color: #D4473B;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.registerButton{
+  background-color:#D4473B;
+  border-radius: 20px;
+  font-size: 18px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  font-weight: 600;
+  padding: 5px 25px;
+  transition: background 0.8s linear;
+  margin: 20px;
+}
+
+.registerButton:hover{
+  background-color:white;
+  color:#954441;
+}
+.registerCaption{
+  color: #954441;
+}
+
 
 .buttonContainer{
   overflow: hidden;
@@ -8,7 +104,6 @@
   margin: -10px;
   padding: 10px;
   height: 100vh;
-
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -28,10 +123,8 @@
 }
 
 .logo2{
-  /* margin-top: -200px; */
   font-size: 20px;
   color: #954441;
-  /* font-weight: lighter; */
   font-family: 'Montserrat', sans-serif;
   position: absolute;
   bottom: 45%;
@@ -45,30 +138,10 @@
   left: 16%;
   transform: translateX(-50%);
 }
-/* 
-.guestLogin{
-  display: inline-block;
-  border: none;
-  border-radius: 100px;
-  background-color: #3A448C;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 20px;
-  padding: 15px 60px;
-  width: auto;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 20px;
-}
-.guestLogin:hover{
-  background-color: lightgray;
-} */
 
 .login{
   display: inline-block;
-  border: 2px solid #954441; /* specify border width and style */
+  border: 2px solid #954441;
   background-color: white;
   border-radius: 100px;
   color: #954441;
@@ -83,8 +156,52 @@
   position: absolute;
   bottom: 45%;
   left: 50%;
-
 }
+
 .login:hover{
   background-color:white;
+}
+
+/* Responsive design adjustments */
+@media only screen and (max-width: 768px) {
+  .logo {
+    font-size: 40px; /* Smaller font size for smaller screens */
+    bottom: 40%; /* Adjust position */
+  }
+
+  .logo2 {
+    font-size: 15px; /* Smaller font size for smaller screens */
+    bottom: 35%; /* Adjust position */
+  }
+
+  .buttonWrapper {
+    bottom: 20%; /* Adjust position */
+    left: 50%; /* Center align */
+  }
+
+  .login {
+    font-size: 16px; /* Smaller font size for smaller screens */
+    padding: 10px 40px; /* Adjust padding */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo {
+    font-size: 30px; /* Even smaller font size for mobile screens */
+    bottom: 30%; /* Adjust position */
+  }
+
+  .logo2 {
+    font-size: 12px; /* Smaller font size for mobile screens */
+    bottom: 25%; /* Adjust position */
+  }
+
+  .buttonWrapper {
+    bottom: 15%; /* Adjust position for mobile */
+  }
+
+  .login {
+    font-size: 14px; /* Smaller font size for mobile screens */
+    padding: 8px 30px; /* Adjust padding for mobile */
+  }
 }

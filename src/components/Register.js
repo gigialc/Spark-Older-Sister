@@ -1,88 +1,74 @@
 import styles from "./styles/Register.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, getUserByEmail } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 import TextField from '@mui/material/TextField';
 
 function Register() {
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState(""); // State for handling errors
     const navigate = useNavigate();
 
     const signIn = e => {
         e.preventDefault();
-
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
-        .then(auth => {
-            navigate("/");
-        })
-        .catch(error => alert(error.message))
+            .then(auth => {
+                navigate("/dashboard");
+            })
+            .catch(error => alert(error.message))
     }
-    const inputStyle = {
-        width: '100%', // 100% width
-        marginBottom: '20px', // 20px margin-bottom
-        // Add more styles as needed
-    };
 
     const createAccount = e => {
         e.preventDefault();
-        
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
-        .then((auth) => {
-            if (auth) {
-                navigate("/");
-            }
-        })
-        .catch(error => alert(error.message))
-    }
+            .then((auth) => {
+                if (auth) {
+                    navigate("/");
+                }
+            })
+            .catch(error => setError(error.message)); // Set error state
+    };
 
     return (
-        <body>
         <div className={styles.container}>
             <div className={styles.logo2}>
-             <h1>Older Sister.</h1>
-             </div>
+                <h1>Older Sister.</h1>
+            </div>
             <div className={styles.right}>
                 <form>
-                    <div style={{"padding-top":"40px"}}>
+                    <div style={{ paddingTop: "40px" }}>
                         <TextField size="small"
-                                    id="outlined-basic" 
-                                    label="Email" 
-                                    variant="outlined" 
-                                    required
-                                    onChange = {e => {setEmail(e.target.value)}}
-                                    sx={inputStyle}
-                                     />
+                                   label="Email"
+                                   variant="outlined"
+                                   required
+                                   onChange={e => setEmail(e.target.value)}
+                                   style={{ width: '100%', marginBottom: '20px' }}
+                        />
                     </div>
-                    <div style={{"padding-top":"40px"}}>
+                    <div style={{ paddingTop: "40px" }}>
                         <TextField size="small"
-                                    id="outlined-basic" 
-                                    label="Password" 
-                                    variant="outlined" 
-                                    required
-                                    onChange = {e => {setPassword(e.target.value)}}
-                                     />
+                                   label="Password"
+                                   variant="outlined"
+                                   required
+                                   type="password"
+                                   onChange={e => setPassword(e.target.value)}
+                                   style={{ width: '100%', marginBottom: '20px' }}
+                        />
                     </div>
-                    <div className = {styles.passwordInput}>
-                        {/* <h4 className= {styles.logo3}> Password</h4> */}
-                        <input type = "password" value = {password} onChange = {e => {setPassword(e.target.value)}} className = {styles.password} />
-                    </div>
-
-                    <button type = "submit" onClick = {signIn} className = {styles.signInBtn}>Sign In</button>
+                    <button type="submit" onClick={signIn} className={styles.signInBtn}>
+                        Sign In
+                    </button>
                 </form>
-
+                {error && <p className={styles.error}>{error}</p>}
                 <p>Don't have an account? Create one here!</p>
-                <button className={styles.registerButton} onClick={createAccount}>Create an account</button>
-            </div>
-            <div className={styles.slogan}>
-                {/* <h2>_destigmatizing women's health_</h2> */}
+                <button className={styles.registerButton} onClick={createAccount}>
+                    Create an account
+                </button>
             </div>
         </div>
-        </body>
-        
     );
 }
 

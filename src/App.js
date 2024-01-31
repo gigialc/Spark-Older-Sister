@@ -15,10 +15,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element = {<Login />} />
+        <Route path="/" element = {<Register />} />
         <Route path="/dashboard" element = {<Dashboard />}/>
         <Route path="/survey" element = {<Survey />} />
-        <Route path="/register" element = {<Register />} />
+        {/* <Route path="/register" element = {<Register />} /> */}
         <Route path="/summarization" element = {<OpenAI />} />
         <Route path="/search" element = {<Search />} />
         <Route path="/contributor" element = {<FormComponent />} />
