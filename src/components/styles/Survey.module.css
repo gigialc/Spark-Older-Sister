@@ -9,21 +9,25 @@
 
 .logo{
     font-size: 3.5rem;
-		color: white;
+		color: #f179e3;
 		font-weight: bold;
 		font-family: 'Georgia';
 		align-self: center;
     text-align: center;
+    word-wrap: break-word;
+    line-height: normal;
+    
 }
 .subtitle{
   margin-top: -300px;
   font-size: 1.7rem;
-  color: white;
+  color: #f179e3;
   font-family: 'Montserrat', sans-serif;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  text-align: center;
 }
 
 .message{
@@ -34,27 +38,30 @@
     position: relative;
     left: 5%;
     top: 4em;
-    color: white;
+    color: #f179e3;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    position: absolute;
 }
 
 .chipContainer{
   position: relative;
-  left: 5%;
   top: 10em;
+  text-align: center;
+  margin: 5%;
+  position: absolute;
 }
 .chips{
   margin:10px;
 }
 
-.submit{
-  text-align: center;
-  margin: 0 auto;
-  position: relative;
-  top: 2em;
-  left: 33%;
 
+.submit{
+  text-align: center; 
+  margin: 0 auto; 
+  position: absolute;
+  left: 50%; /* Move the button to the center horizontally */
+  transform: translateX(-50%);
 }
 /*
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
