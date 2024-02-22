@@ -5,7 +5,7 @@
 .dboard{
   display:grid;
   height: 90vh;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 2fr 5fr;
   grid-template-rows:  auto;
   grid-template-areas:
   "l articles "
@@ -16,18 +16,101 @@
   width: 80%;
   padding-left: 10%;
 }
+
+.articlePaper{
+  grid-area: articles;
+  height: 86%;
+  overflow-y: scroll;
+  margin-top: 30px;
+  margin-right: 20px;
+  padding-right: 50px;
+}
+
+@media screen and (max-width: 650px) {
+.logo1{
+  display: none;
+}
+}
+
+@media screen and (max-width: 1000px) {
+  /* Adjustments for smaller screens */
+  .dboard {
+    display: flex;
+    flex-direction: column;
+    height: 200vh; /* Set the height of the container to the full viewport height */
+    overflow: hidden; /* Hide overflow to prevent unwanted scrollbars */
+    position: relative; /* Set position to relative */
+  }
+
+  .welcome {
+    flex: auto; /* Let the welcome section grow or shrink as needed */
+    padding-bottom: 1%;
+    }
+    
+  .quoteImage{
+    display:none;
+  }
+  .quotes{
+    display: none;
+  }
+  
+  .articlePaper {
+    height:80%;
+    padding-left: 5%;
+}
+}
+
+@media screen and (max-width: 700px) {
+  .articleGrid{
+    padding-top: 2%;
+    padding-bottom: 7%;
+    display: grid;
+    /*0.5rem*/
+    /*
+    column-gap: 45px;
+    row-gap: 10px;
+    */
+    gap: 2%;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    grid-template-rows: auto;
+    margin-left: 0%;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+  .articleGrid{
+    padding-top: 2%;
+    padding-bottom: 7%;
+    display: grid;
+    /*0.5rem*/
+    /*
+    column-gap: 45px;
+    row-gap: 10px;
+    */
+    gap: 2%;
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    grid-template-rows: auto;
+    margin-left: 0%;
+  }
+
+}
+
+
+
 .logos{
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  left: 70%;
+  right: 1%;
   color: #D4473B;
 }
 
 .logo1{
   font-family: 'Georgia', sans-serif;
-  margin-bottom: -15px;
+  margin-bottom: 5%;
+  font-size: 150%;
   color: #D4473B;
 }
 
@@ -37,13 +120,13 @@
   color: #D4473B;
 }
 .contributorBtn{
-  position: absolute;
+  position: fixed;
   background-color: #D4473B;
   width: 80px;
   height: 80px;
   border-radius: 999px;
-  margin-left: 1300px;
-  margin-top: -120px;
+  right: 2%;
+  margin-top: -14%;
   box-shadow: none;
   border: none;
   transition: all 0.3s ease; /* add transition for smooth animation */
@@ -75,12 +158,12 @@
 
 .quoteImagePos{
   margin-left: 7.75%;
-  margin-top: 50px;
+  margin-top: 5%;
 }
 
 .quotes{
   position: absolute;
-  width: 270px;
+  width: 15%;
   height: auto;
   padding: 15px;
   top: 650px;
@@ -89,31 +172,10 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+
 .quoteImage{
-  height: 350px;
-  width: 300px;
+  height: 100%;
+  width: 100%;
 }
 
-.articlePaper{
-  grid-area: articles;
-  height: 86%;
-  overflow-y: scroll;
-  margin-top: 30px;
-  margin-right: 20px;
-  padding-right: 50px;
-}
 
-.articleGrid{
-  padding-top: 2%;
-  padding-bottom: 7%;
-  display: grid;
-  /*0.5rem*/
-  /*
-  column-gap: 45px;
-  row-gap: 10px;
-  */
-  gap: 30px;
-  grid-template-columns: repeat(3, minmax(0px, 1fr)); /*0 prevents images from clipping outside border-box*/
-  grid-template-rows: auto;
-  margin-left: 0%;
-}
