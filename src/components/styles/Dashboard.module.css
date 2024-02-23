@@ -41,11 +41,6 @@
     overflow: hidden; /* Hide overflow to prevent unwanted scrollbars */
     position: relative; /* Set position to relative */
   }
-
-  .welcome {
-    flex: auto; /* Let the welcome section grow or shrink as needed */
-    padding-bottom: 1%;
-    }
     
   .quoteImage{
     display:none;
@@ -126,7 +121,7 @@
   height: 80px;
   border-radius: 999px;
   right: 2%;
-  margin-top: -14%;
+  margin-top: -10%;
   box-shadow: none;
   border: none;
   transition: all 0.3s ease; /* add transition for smooth animation */

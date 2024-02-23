@@ -120,8 +120,8 @@ function Survey() {
           display: "block", 
           width: "fit-content", 
           height: "50px",
-          backgroundColor: '#ffcef9',   //its just transparent now, TBF
-          color: '#f179e3', 
+          backgroundColor: '#ff80ca',   //its just transparent now, TBF
+          color: 'white', 
           borderRadius: "20px",
           padding: "6px 12px",
           fontWeight: "bold",
@@ -141,7 +141,7 @@ function StyledChip(props) {
     <Chip
       {...rest}
       sx={[
-        clicked ? { backgroundColor: "#f179e3", color: "#b4029f" } : { backgroundColor: "#ffcef9", color: "#f179e3" },
+        clicked ? { backgroundColor: "#e10786", color: "white" } : { backgroundColor: "#ff80ca", color: "white" },
         { margin: 1 }
         
       ]}
