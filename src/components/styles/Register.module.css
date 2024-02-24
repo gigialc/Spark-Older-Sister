@@ -4,21 +4,15 @@ body {
   margin: 0;
 }
 
-.container{
-  height: 100vh;
-  background: #FFEDFD ;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows:  auto;
-  grid-template-areas:
-  ". . . "
-  "l . . "
-  "ll . r"
-  ". slogan . "
-
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Keep as is if you want other items centered */
+  justify-content: flex-start; /* This moves items towards the start (top) */
+  min-height: 100vh;
+  background: #FFEDFD;
 }
-
 
 .logo1{
   grid-area: l;
@@ -30,7 +24,7 @@ body {
   grid-area: ll;
   align-self: center;
   justify-self: left;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   padding-left: 100px;
   font-family: 'Georgia', sans-serif;
   color: #D4473B;
@@ -49,14 +43,13 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.right{
-  grid-area: r;
-  padding-bottom: 50px;
-  align-self: center;
-  justify-self: center;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  margin-right: 100px;
+.right {
+  width: 90%;
+  max-width: 400px; /* Adjust based on your preference for form width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -100px; 
 }
 
 /* this is outside of the grid cuz it dont fit and idk how to fix it  */
@@ -72,24 +65,33 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.registerButton{
-  background-color:#D4473B;
-  border-radius: 20px;
-  font-size: 18px;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  border: none;
-  font-weight: 600;
-  padding: 5px 25px;
-  transition: background 0.8s linear;
-  margin: 20px;
+.signInBtn, .registerButton {
+  width: 100%; /* Make buttons full width within the form */
+  padding: 10px 0; /* Adjust padding to your liking */
+  border: none; /* Remove border if not needed */
+  border-radius: 5px; /* Rounded corners */
+  margin: 10px 0; /* Space out buttons */
+  cursor: pointer; /* Indicates clickable items */
+  background-color: #D4473B; /* Example background color */
+  color: white; /* Text color */
+  font-family: 'Montserrat', sans-serif; /* Maintain font consistency */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.registerButton:hover{
-  background-color:white;
-  color:#954441;
+.signInBtn:hover, .registerButton:hover {
+  background-color: #C1352D; /* Slightly darker shade on hover */
 }
 .registerCaption{
   color: #954441;
 }
 
+.error {
+  color: #D4473B; /* Example error color */
+  margin: 10px 0; /* Add some vertical margin for spacing */
+}
+
+/* Adjustments for paragraph and button spacing */
+p {
+  text-align: center; /* Center-align the text */
+  margin: 20px 0; /* Add some spacing around the paragraph */
+}

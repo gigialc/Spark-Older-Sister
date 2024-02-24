@@ -39,23 +39,23 @@ function Register() {
             </div>
             <div className={styles.right}>
                 <form>
-                    <div style={{ paddingTop: "40px" }}>
-                        <TextField size="small"
-                                   label="Email"
-                                   variant="outlined"
-                                   required
-                                   onChange={e => setEmail(e.target.value)}
-                                   style={{ width: '100%', marginBottom: '20px' }}
+                <div style={{ paddingTop: "20px" }}> {/* Adjust paddingTop as needed */}
+                <TextField size="small"
+                                label="Email"
+                                variant="outlined"
+                                required
+                                onChange={e => setEmail(e.target.value)}
+                                style={{ width: '100%', marginBottom: '10px' }} // Reduced marginBottom
                         />
                     </div>
-                    <div style={{ paddingTop: "40px" }}>
-                        <TextField size="small"
-                                   label="Password"
-                                   variant="outlined"
-                                   required
-                                   type="password"
-                                   onChange={e => setPassword(e.target.value)}
-                                   style={{ width: '100%', marginBottom: '20px' }}
+                    <div>
+                <TextField size="small"
+                                label="Password"
+                                variant="outlined"
+                                required
+                                type="password"
+                                onChange={e => setPassword(e.target.value)}
+                                style={{ width: '100%', marginBottom: '20px' }} // Adjust marginBottom as needed
                         />
                     </div>
                     <button type="submit" onClick={signIn} className={styles.signInBtn}>

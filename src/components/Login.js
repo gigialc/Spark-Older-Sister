@@ -59,23 +59,22 @@ function Login() {
                 <div className={registerStyles.right}>
                     <form>
                     <div style={{"padding-top":"40px"}}>
-                        <TextField size="small"
-                                    id="outlined-basic" 
-                                    label="Email" 
-                                    variant="outlined" 
-                                    required
-                                    onChange = {e => {setEmail(e.target.value)}}
-                                    sx={inputStyle}
-                                     />
-                    </div>
-                    <div style={{"padding-top":"40px"}}>
-                        <TextField size="small"
-                                    id="outlined-basic" 
-                                    label="Password" 
-                                    variant="outlined" 
-                                    required
-                                    onChange = {e => {setPassword(e.target.value)}}
-                                     />
+                    <TextField size="small"
+                            id="outlined-email"
+                            label="Email"
+                            variant="outlined"
+                            required
+                            onChange={e => setEmail(e.target.value)}
+                            sx={inputStyle} />
+
+                    <TextField size="small"
+                            id="outlined-password"
+                            label="Password"
+                            variant="outlined"
+                            required
+                            type="password" /* Makes this a password field */
+                            onChange={e => setPassword(e.target.value)}
+                            sx={inputStyle} />
                     </div>
                     <div className = {styles.passwordInput}>
                         {/* <h4 className= {styles.logo3}> Password</h4> */}
