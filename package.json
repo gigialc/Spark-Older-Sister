@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apideck/better-ajv-errors": "^0.3.6",
     "@chakra-ui/react": "^2.5.3",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.13",
+    "@popperjs/core": "^2.11.8",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "firebase": "^9.17.1",
+    "firebase": "^9.23.0",
     "framer-motion": "^10.9.1",
+    "fs-extra": "^11.2.0",
     "jquery": "^3.6.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -20,7 +23,8 @@
     "react-pro-sidebar": "^1.0.0",
     "react-promise-tracker": "^2.1.1",
     "react-router-dom": "^6.8.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "source-map": "^0.7.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
