@@ -35,7 +35,7 @@ function Register() {
     return (
         <div className={styles.container}>
             <div className={styles.logo2}>
-                <h1>Older Sister.</h1>
+                <h1>Older Sister</h1>
             </div>
             <div className={styles.right}>
                 <form>
