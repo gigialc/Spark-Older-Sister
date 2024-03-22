@@ -224,7 +224,9 @@ main.Profile{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
   }
+
 
   .tabs{
     height: 200px;

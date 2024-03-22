@@ -36,7 +36,7 @@ function Search() {
   const [links, setLinks] = useState([])
   const [fullContent, setFullContent] = useState([])
   const navigate = useNavigate()
-
+const API_KEY ="AIzaSyC-44Luso6FH_9opJC4d82MZj90C9UMQwY";
 
 
   // For testing purposes: when the generate summary button is clicked, we will check each link

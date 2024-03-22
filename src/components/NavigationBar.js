@@ -107,7 +107,7 @@ function NaviBar() {
       <main > 
        
           <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{background: "#FFEDFD", shadow:'none', height:'80px'}}>
+      <AppBar position="static" sx={{background: "#FFEDFD", shadow:'none', height:'80px', position: "fixed", zIndex: 1}}>
         <StyledToolbar>
           <IconButton
             size="large"
