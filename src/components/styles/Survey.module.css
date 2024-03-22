@@ -39,27 +39,26 @@
   margin-top: -300px;
   font-size: 1.7rem;
   color: #ff80ca;
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
   border: 50px  #b10067; /* Add border style */
     border-radius: 50px; 
     background-color: #b10067;
     inline-size: fit-content;
     margin: auto;
     margin-top: 2%;
-    padding: 1%;
+    margin-bottom: 1%;
+    padding: 2%;
 }
 
 .message{
     font-size: 1.5rem;
     font-weight: bold;
-    margin-left: 1rem;
     position: relative;
-    left: 5%;
     color: white;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -68,9 +67,9 @@
     border-radius: 50px; 
     background-color: #f94cb1;
     inline-size: fit-content;
-    margin: auto;
-    margin-top: 2%;
     padding: 1%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .chipContainer{
@@ -78,17 +77,31 @@
   top: 10em;
   text-align: center;
   margin: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
   position: absolute;
+}
+
+@media screen and (max-width: 1140px) {
+  .chipContainer{
+    margin-left: 5%;
+  margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .chipContainer{
+    margin-left: 5%;
+  margin-right: 5%;
+  }
 }
 .chips{
   margin:10px;
 }
 
 .submit{
-  text-align: center; 
-  margin: 0 auto; 
   position: absolute;
-  left: 50%; /* Move the button to the center horizontally */
+  left: 52%; /* Move the button to the center horizontally */
   transform: translateX(-50%);
 }
 /*

@@ -70,10 +70,11 @@ function FormComponent() {
           <form onSubmit={handleSubmit} className="form-total">
             <label className="surveyLabel"> Title <input type="text" id="fname" name="firstname" className="contributorInput" onChange={(event) => setTitle(event.target.value)} /></label>
             <label className="surveyLabel"> URL  <input type="text" id="fname" name="firstname" className="contributorInput" onChange={(event) => setUrl(event.target.value)} /></label>
-            <input type="text" id="fname" name="firstname"  placeHolder="Type your mini blog..." className="contributorInput2" />
+            <textarea id="fname" name="firstname"  placeHolder="Type your mini blog..." className="contributorInput2" />
           </form>
         <div className="surveyLabel2">
           <h1>Topics</h1>
+          <div className='topicbuttons'>
           <StyledChip 
               label="Menstruation"
               onClick={() => handleTopicClick("menstruation","https://www.nhs.uk/conditions/period-pain/")}
@@ -114,6 +115,7 @@ function FormComponent() {
               onClick={() => handleTopicClick("menopause","https://www.nia.nih.gov/health/what-menopause")}
               clicked={selectedTopics.includes("menopause")}
             />
+            </div>
           {/* <TextField className="other-topic" label="Other Topic" variant="outlined" sx={{width: '450px', marginTop: "10px", marginLeft: "10px"}}/> */}
       </div>
       <Button

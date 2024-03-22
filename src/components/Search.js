@@ -37,6 +37,9 @@ function Search() {
   const [fullContent, setFullContent] = useState([])
   const navigate = useNavigate()
 
+const API_KEY = "AIzaSyC-44Luso6FH_9opJC4d82MZj90C9UMQwY";
+
+
   // For testing purposes: when the generate summary button is clicked, we will check each link
   // 1) if its in our database already, do nothing
   // 2) if its not in our database, generate a summary for it and create an object for it in our database

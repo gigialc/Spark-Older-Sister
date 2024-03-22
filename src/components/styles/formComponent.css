@@ -49,8 +49,10 @@
   margin-top: 2.5%;
   
 }
+
+
 .contributorIcon{
-  margin-left: 50px;
+  margin-left: 1%;
 }
 .content{
   display: flex;
@@ -68,6 +70,7 @@
   font-family: 'Montserrat';
   position: relative;
   left: 0.5%;
+  font-size: 50px;
 }
 .form-total{
   display: flex;
@@ -89,6 +92,7 @@
   color: #D4473B;
   font-family: 'Montserrat';
   font-weight: 700;
+  font-size: 30px;
 }
 
 .surveyLabel2{
@@ -98,10 +102,16 @@
   font-family: 'Montserrat';
   font-weight: 700;
 }
+.topicbuttons {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  justify-content: center;
+}
 
 .surveyLabel2 h1{
   position: relative;
   left: 1%;
+  text-align: center;
 }
 .form-title{
   padding-top: 10px;
@@ -129,33 +139,63 @@
 } */
 .submit{
   display: flex;
-  left: 37.5%;
+  align-self: center;
   top: 2%;
   padding: 10px;
 
 }
 
+
 .contributorInput{
+  margin-top: 10px;
   margin-bottom: 20px;
-  width: 50%;
+  width: 100%;
   height: 30px;
   border-radius: 20px;
   background-color: transparent;
   border-color: #D4473B;
+  padding-left: 10px;
+  font-size: 20px;
 }
 .contributorInput2{
-  margin-bottom: 20px;
-  width: 1000px;
+  width: 100%;
   height: 150px;
   border-radius: 20px;
+  overflow-y: scroll;
   background-color: transparent;
   border-color: #D4473B;
+  padding-top: 10px;
+  padding-left: 10px;
 }
+
+
+@media screen and (max-width: 650px) {
+   
+  .contributorInput2{
+    height: 90px;
+  }
+
+  .contributorInput{
+    font-size: 15px;
+  }
+
+  .contributeTitle{
+    font-size: 30px;
+  }
+
+  .surveyLabel{
+    font-size: 20px;
+  }
+
+  
+  }
+
+
 .contributorBack {
   z-index: 100;
   position: absolute;
   top: 20%;
-  right: 10%;
+  right: 1%;
   padding: 10px 20px;
   background-color: #D4473B;
   color: white;
