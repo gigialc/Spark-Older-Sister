@@ -62,7 +62,7 @@ function Profile() {
         setEmail(user.email);
         setFirstname(user.firstname);
         setLastname(user.lastname);
-        setPronouns(user.pronouns);
+        
         
         const userDocRef = doc(firestore, "users", user.uid);
         const userDoc = await getDoc(userDocRef);
