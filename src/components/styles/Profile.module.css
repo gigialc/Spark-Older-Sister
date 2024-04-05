@@ -5,80 +5,125 @@
     height: 66.66%;
     box-sizing: border-box;
     margin-top: -2%;
-    margin-left: 20px;
+    margin-left: 5%;
   }
   .rightChildTop h1{
-      text-align: center;
+      text-align: left;
       line-height: 1;
       flex-wrap: wrap;
+      color:#ef6448;
+
+  }
+
+  
+  .h3{
+    font-size: 10px;
+    font-weight: light;
   }
 
   .label {
     display: inline-block;
-    width: 100px; /* adjust as needed */
+    width: fit-content; /* adjust as needed */
     font-weight: bold;
+    text-align: left;
   }
+
+
+  .nameinput {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+  }
+
+  
+  .small {
+    position: relative;
+    top: 12px;
+   left: 20px;
+   font-size: 15px;
+  }
+
+  .field{
+    margin-bottom: auto;
+    margin-right: 10%;
+}
+
+.name{
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: left;
+  margin-left: 5%;
+  margin-top: 70px;
+}
+
+.name h2{
+  margin-left: 10px;
+  font-size: 40px;
+  color: #781208;
+}
+ 
+
+
 
   .content {
     display: inline-block;
     margin: 0;
-    min-width: fit-content;
-    width: 50%;
+    min-width: 20vw;
+    max-width: fit-content;
     height: 2rem;
 
-    position: relative;
     top: -7%;
-    left: 2%;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 7px 10px;
-    margin-top: 2rem;
-    margin-left: 2em;
+    
 
     
-    background: #FFEDFD;
-    border: 2px solid #3A448C;
+    background: #ffffff;
+    border: 2px solid #ef6448;
     border-radius: 999px;
   }
 
-    .label, .content{
-      margin-left: 10%;
-    }
-
-    .pronouns{
+  .pronouns{
     
       position: relative;
       margin-left: 12.5%;
 
     }
-.seperator{
-  position: absolute;
-  width: 1px;
-  height: 100vh; /* Adjusted to cover the entire viewport height */
-  right: 62.5%;
-  top: 80px;
 
-  border: 1px solid #C4C4C4;
-  z-index: 1;
-}
 
 .dboard{
+  background-color: #f2f2f2;
   display:grid;
-  height: 90vh;
-  grid-template-columns: 1/3fr 4/3fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-rows:  auto;
+  height: 100vh; 
+  overflow: hidden;
   grid-template-areas:
   "l articles "
 }
 .welcome{
   grid-area: l;
-  padding-top: 5%;
+  padding-top: 50px;
   width: 80%;
   padding-left: 5%;
   
 }
+
+.articlePaper{
+  height: 100%;
+  margin-top: 3%;
+  margin-right: 3%;
+  padding-right: 3%;
+  left: 5px;
+  overflow-y: auto; 
+  overflow-x: hidden; 
+}
+
+
 .logos{
   position: absolute;
   display: flex;
@@ -97,20 +142,21 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.articlePaper{
-  height: 86%;
-  
-  margin-top: 3%;
-  margin-right: 3%;
-  padding-right: 3%;
-}
 
+
+.check{
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
 .articleGrid{
   padding-top: 2%;
   padding-bottom: 7%;
   display: grid;
-  margin-left: 6%;
+  margin-left: 1%;
 }
+
+
 
 main.Profile{
     display: flex;
@@ -218,14 +264,6 @@ main.Profile{
     top:0;
   }
 
-  .name{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-  }
 
 
   .tabs{
@@ -233,11 +271,12 @@ main.Profile{
  } 
 
 @media screen and (max-width: 700px) {
-  .name h2{
-    font-size: 90%;
-  }
+
   .rightChildTop h1{
     font-size: 30px;
+}
+.welcome{
+  display: none;
 }
   }
   

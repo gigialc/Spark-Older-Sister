@@ -11,8 +11,12 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import {Paper} from '@mui/material'
 import styles from "./styles/Dashboard.module.css";
 import { useLocation } from "react-router-dom";
+import Menu from '@mui/material/Menu';
+import Tab from '@mui/material/Tab';
+
 
 const Search = styled('div')(({ theme }) => ({
+  
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
     marginLeft: 0,
@@ -66,6 +70,12 @@ const Search = styled('div')(({ theme }) => ({
     padding: theme.spacing(1, 2),
   }));
   
+
+  
+  
+
+
+
 function NaviBar() {
     const location = useLocation();
     // Get the current path from the location object
@@ -73,6 +83,9 @@ function NaviBar() {
     // navigate is used to go to search page while passing parameters
     const navigate = useNavigate()
     const [searchInput, setSearchInput] = useState("");
+    const [menu, setMenu] = useState(null);
+
+
     const [state, setState] = React.useState({
       top: false,
       left: false,
@@ -103,26 +116,47 @@ function NaviBar() {
         }
       }
 
+
+      const handleOpen = (event) => {
+        setMenu(event.currentTarget);
+      };
+    
+      const handleClose = () => {
+        setMenu(null);
+      };
+
+      
+  function LinkTab(props) {
+    return (
+      <Tab
+        component="a"
+        onClick={(event) => {
+          navigate(props.href)
+        }}
+        sx={{
+          justifyContent: 'flex-start',
+          margin: '-5px',
+        }}
+        {...props}
+      />
+    );
+  }
+
     return (
       <main > 
        
           <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{background: "#FFEDFD", shadow:'none', height:'80px', position: "fixed", zIndex: 1}}>
+      <AppBar position="static" sx={{background: "#ffffff", shadow:'none', height:'80px', position: "fixed", zIndex: 1}}>
         <StyledToolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            onClick={toggleDrawer('left', true)}
-          >
-           <a href="/profile">
-            <button className={styles.profileBtn}><AccountCircleIcon fontSize="large" sx={{color:"white"}}/></button>
-           </a>
-          </IconButton>
+        <div className= {styles.logos}> 
+        <a href="/dashboard" className={styles.logo1} style={{ textDecoration: 'none' }}>Older Sister.</a>
+            
+            {/* <h2 className={styles.logo2}>Destigmatizing Women's Health</h2> */}
+          </div>
+
+          <div className= {styles.rightHeader}>
          {/* search bar*/}
-          <Search>
+          <Search sx={{right:"20px"}}>
             <StyledPaper component="form" onSubmit={handleSubmit}>
             <SearchIconWrapper sx={{backgroundColor: 'transparent'}}>
               <SearchIcon />
@@ -136,10 +170,51 @@ function NaviBar() {
               />
             </StyledPaper>
           </Search>
-          <div className= {styles.logos}> 
-            <h1 className={styles.logo1}>Older Sister.</h1>
-            {/* <h2 className={styles.logo2}>Destigmatizing Women's Health</h2> */}
+
+          <div onMouseEnter={handleOpen} onMouseLeave={handleClose}>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+              onClick={toggleDrawer('left', true)}
+            >
+            <a href="/profile">
+              <button className={styles.profileBtn}><AccountCircleIcon fontSize="large" sx={{color:"black"}}/></button>
+            </a>
+            </IconButton>
+          </div> 
+          <Menu
+        menu={menu}
+        open={Boolean(menu)}
+        onClose={handleClose}
+        onMouseEnter={handleOpen}
+        onMouseLeave={handleClose}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+        PaperProps={{
+          style: {
+            marginTop: '40px',
+          },
+        }}
+      
+      >
+        <div onMouseLeave={handleClose}>
+              <LinkTab iconPosition="start"label="Account Management" href="/profile"  sx={{ display: 'block' }}/>
+              <LinkTab iconPosition="start" label="Coin Shop" href="/coin"  sx={{ display: 'block' }}/>
+              <LinkTab iconPosition="start" label="Edit Topics" href="/survey"  sx={{ display: 'block' }}/>
+              <LinkTab  iconPosition="start" label="Bookmarks" href="/liked"  sx={{ display: 'block' }}/>
+              <LinkTab  iconPosition="start" label="Accessibility" href="/access"  sx={{ display: 'block' }} />
+              <LinkTab  iconPosition="start" label="Notifications" href="/notif"  sx={{ display: 'block' }}/>
+              <LinkTab iconPosition="start" label="Privacy" href="/profile"  sx={{ display: 'block' }} />
+        </div>
+      </Menu>
           </div>
+      
+         
         </StyledToolbar>
       </AppBar>
     </Box>

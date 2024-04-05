@@ -1,85 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .survey{
-  background: url("https://garden.spoonflower.com/c/7776022/p/f/m/rfQt18caSJi92EwtdgtUbZAH3Stb3ePRx6sMArXtCIIwjjUj2Qo/kawaii%20medical%20pink.jpg");
-  height:100vh;
-  width:100vw;
   overflow: hidden;
-  background-size: 350px;
-  animation: moveBackground 20s linear infinite; 
-}
-@keyframes moveBackground {
-  from {
-      background-position: 0 0; /* Start position of the background */
-  }
-  to {
-      background-position: 100% 0; /* End position of the background */
-  }
+
 }
 
-.logo{
-    font-size: 3.5rem;
-		color: white;
-		font-weight: bold;
-		font-family: 'Georgia';
-		align-self: center;
-    text-align: center;
-    word-wrap: break-word;
-    line-height: normal;
-    border: 50px  #b10067; /* Add border style */
-    border-radius: 50px; 
-    background-color: #b10067;
-    inline-size: fit-content;
-    margin: auto;
-    margin-top: 2%;
-    padding: 2%;
-    
+.title{
+  display: flex;
+  width: fit-content;
+  text-align: left;
+  margin-top: 150px;
+  font-size: 10vh;
+  color: #781208;
 }
-.subtitle{
-  margin-top: -300px;
-  font-size: 1.7rem;
-  color: #ff80ca;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 50px  #b10067; /* Add border style */
-    border-radius: 50px; 
-    background-color: #b10067;
-    inline-size: fit-content;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 1%;
-    padding: 2%;
-}
+
 
 .message{
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: relative;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    position: absolute;
-    border: 5px  #ff80ca; /* Add border style */
-    border-radius: 50px; 
-    background-color: #f94cb1;
-    inline-size: fit-content;
-    padding: 1%;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 2vh;
+    text-align: left;
+    margin-left: 1%;
 }
 
-.chipContainer{
-  position: relative;
-  top: 10em;
-  text-align: center;
-  margin: 5%;
-  margin-left: 20%;
-  margin-right: 20%;
-  position: absolute;
+.chipContainer {
+  display: grid;
+  width: 10%;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-auto-rows: minmax(10px, auto);   /* Minimum height for each row */
+  gap: 1px;                            
 }
 
 @media screen and (max-width: 1140px) {
@@ -104,76 +51,22 @@
   left: 52%; /* Move the button to the center horizontally */
   transform: translateX(-50%);
 }
-/*
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-body{
-  background: linear-gradient(to right, #A473E6, #9DB7FD, #87FAE7);
-}
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
 
+.dboard{
   
-  .logo {
-    margin-top: -300px;
-    font-size: 3.5rem;
-		color: white;
-		font-weight: bold;
-		font-family: 'Montserrat', sans-serif;
-		align-self: center;
-    text-align: center;
+  background-color: #f2f2f2;
+  display:grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows:  auto;
+  grid-template-areas:
+  "l articles "
 }
-
-  .logo2 {
-    margin-top: -300px;
-    font-size: 1.7rem;
-    color: white;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .message {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 5rem;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-  }
-  
-
-  .articleContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    gap: 10px;
-
+.welcome{
+  grid-area: l;
+  padding-top: 50px;
+  width: 80%;
+  padding-left: 5%;
   
 }
-
-.chips{
-  margin:10px;
-}
-
-.submit{
-  font-size: 25px;
-  margin: 10px;
-}*/

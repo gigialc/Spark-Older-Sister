@@ -8,8 +8,30 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { getAuth } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
+import NaviBar from './NavigationBar';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
+import {Paper} from '@mui/material'
+import { getFirestore } from "firebase/firestore";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ArticleIcon from '@mui/icons-material/Article';
+import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
+import LogoutIcon from '@mui/icons-material/Logout';
+import Checkbox from '@mui/material/Checkbox';
 
 function Survey() {
+  const auth = getAuth();
+    const firestore = getFirestore();
+    // navigate is used to go to search page while passing parameters
+    // logged in user's email. Can be used later
+    const [email, setEmail] = useState(null)
+
+
+    // a user's topics and links to iterate over
+    const [topics, setTopics] = useState([])
+    const [links, setLinks] = useState([])
+
   // Defining our variables that we will use for this page
   const [urlList, setUrl] = useState([]);
   const [selectedTopics, setSelectedTopics] = useState([]);
@@ -52,14 +74,78 @@ function Survey() {
   };
   
   
-//Reproductive health, Breast health, Sexual health, Mental health, Cardiovascular health, Bone health, Cancer, Autoimmune diseases, Skin health, Muscular Health, Nutrition and fitness]
+  function StyledChip(props) {
+    const { clicked, ...rest } = props;
+    const [click, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
+
+    return (
+
+      <Chip
+        {...rest}
+        avatar={<Checkbox checked={clicked} onChange={handleClick} />}
+        sx={{
+          backgroundColor: clicked ? "light-grey" : "white",
+          color: clicked ? "black" : "black",
+          margin: 1
+        }}
+      />
+    );
+  }
+  
+  
+  function LinkTab(props) {
+    return (
+      <Tab
+        component="a"
+        onClick={(event) => {
+          navigate(props.href)
+        }}
+        sx={{
+          justifyContent: 'flex-start',
+          margin: '-5px',
+        }}
+        {...props}
+      />
+    );
+  }
+
+
   return (
-    <main className={styles.survey}>
+    <main > 
+      
+      <NaviBar />
+      <div className={styles.dboard} >
+        <div className={styles.welcome}>
+          <Paper elevation={0} sx={{width:"100%"}} >
+          <Tabs value={email} aria-label="nav tabs example" orientation="vertical" sx={{display: 'flex', justifyContent: 'flex-start', backgroundColor:"#f2f2f2"}}>
+            <br></br>
+            <br></br>
+            <LinkTab icon={<AccountCircleIcon />} iconPosition="start"label="Account Management" href="/profile" />
+            <LinkTab icon={<DashboardCustomizeIcon />} iconPosition="start" label="Coin Shop" href="/profile" />
+            <LinkTab icon={<DashboardCustomizeIcon />} iconPosition="start" label="Edit Topics" href="/survey" />
+            <LinkTab icon={<FavoriteIcon />} iconPosition="start" label="Bookmarks" href="/liked" />
+            <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Accessibility" href="/profile" />
+            <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Notifications" href="/profile" />
+            <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Privacy" href="/profile" />
+            
+            {/* <br></br> */}
+            <LinkTab icon={<LogoutIcon />} iconPosition="start" label="Logout" href="/register" sx={{position: "relative",  justifyContent: 'flex-start'}}/>
+          </Tabs>
+        </Paper>
+        </div>
+
+
+        <Paper  className={styles.articlePaper} elevation={0} sx={{ backgroundColor: '#f2f2f2' }}>
+          
+        <main className={styles.survey}>
       <div>
-            <h1 className = {styles.logo}>Older Sister</h1>
-            <h2 className={styles.subtitle}>-Destigmatizing Women's Health-</h2>
-     
-      <p className={styles.message}>What are you interested in?</p>
+            <h1 className = {styles.title}>Edit Topics</h1>
+      
+      <p className={styles.message}>Customize your article feed</p>
       
       <div style={SurveyButton.containerStyle} className={styles.chipContainer}>
       
@@ -68,7 +154,7 @@ function Survey() {
           onClick={() => handleTopicClick("Reproductivehealth","https://www.theskimm.com/wellness/why-is-my-period-blood-brown")}
           clicked={selectedTopics.includes("Reproductivehealth")}
         />
-        <StyledChip
+        <StyledChip 
           label="Breast Health"
           onClick={() => handleTopicClick("Breasthealth","https://www.healthline.com/health/womens-health/why-does-my-breast-hurt-when-i-press-it")}
           clicked={selectedTopics.includes("Breasthealth")}
@@ -113,41 +199,41 @@ function Survey() {
           onClick={() => handleTopicClick("Nutritionandfitness","https://www.ndtv.com/health/weight-loss-diet-essential-nutrients-you-need-for-losing-weight-quickly-2098994")}
           clicked={selectedTopics.includes("Nutritionandfitness")}
         />
-
+      </div>
         <Button component={Link}  color="primary" onClick={handleSubmit} className={styles.submit} 
         sx=
         {{ 
           display: "block", 
           width: "fit-content", 
-          height: "50px",
-          backgroundColor: '#ff80ca',   //its just transparent now, TBF
+          backgroundColor: '#ffab2d',   //its just transparent now, TBF
           color: 'white', 
           borderRadius: "20px",
           padding: "6px 12px",
           fontWeight: "bold",
           fontSize: "25px",
+          marginTop: '10px',
+          left: '200px',
           }}>
-        Start my Dashboard
+        Submit
         </Button>
-      </div>
+     
       </div>
     </main>
+
+
+
+        </Paper>
+
+      </div>
+  </main>
   );
 }
 
-function StyledChip(props) {
-  const { clicked, ...rest } = props;
-  return (
-    <Chip
-      {...rest}
-      sx={[
-        clicked ? { backgroundColor: "#e10786", color: "white" } : { backgroundColor: "#ff80ca", color: "white" },
-        { margin: 1 }
-        
-      ]}
-    />
-  );
-}
+
+
+
+
 
 
 export default Survey;
+

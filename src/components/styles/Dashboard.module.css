@@ -26,11 +26,6 @@
   padding-right: 50px;
 }
 
-@media screen and (max-width: 650px) {
-.logo1{
-  display: none;
-}
-}
 
 @media screen and (max-width: 1000px) {
   /* Adjustments for smaller screens */
@@ -94,19 +89,23 @@
 
 
 .logos{
-  position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  right: 1%;
-  color: #D4473B;
+  flex-direction: row;
+  align-items: left;
+}
+
+.rightHeader{
+  display:flex; 
+  flex-direction: row;
+  margin-left: auto;
 }
 
 .logo1{
   font-family: 'Georgia', sans-serif;
-  margin-bottom: 5%;
-  font-size: 150%;
-  color: #D4473B;
+  margin-bottom: 1%;
+  font-size: 200%;
+  font-weight: bold;
+  color: #781208;
 }
 
 .logo2{
