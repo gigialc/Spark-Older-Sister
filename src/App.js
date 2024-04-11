@@ -12,6 +12,7 @@ import LikedArticles from "./components/LikedArticles";
 import Coin from "./components/Coin.js";
 import Access from "./components/Access.js";
 import Notif from "./components/Notif.js";
+import Searchpage from "./components/Searchpage.js";
 import { OpenAI } from './components/scripts/openAI'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/profile" element = {<Profile />} />
         <Route path="/contributorfeed" element={<ContributorPage/>}/>
         <Route path="/liked" element={<LikedArticles/>}/>
+        <Route path="/searchpage" element={<Searchpage/>}/>
         {/* <Route path="/coin" element={<Coin/>}/>
         <Route path="/access" element={<Access/>}/>
         <Route path="/notif" element={<Notif/>}/> */}

@@ -27,6 +27,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
+import Footer from './Footer';
 
 function Profile() {
     //defining our variables that will be used within the dashboard
@@ -548,14 +549,18 @@ function Profile() {
           }}>
         Change
         </Button>
+        
      
                 <br></br>
                 <br></br>
                 <br></br>
             </div>
+            
+           
           </Paper>
-
+      
         </div>
+        
     </main>
     );
   }

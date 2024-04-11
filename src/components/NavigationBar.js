@@ -13,6 +13,7 @@ import styles from "./styles/Dashboard.module.css";
 import { useLocation } from "react-router-dom";
 import Menu from '@mui/material/Menu';
 import Tab from '@mui/material/Tab';
+import { auto } from '@popperjs/core';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -27,17 +28,16 @@ const Search = styled('div')(({ theme }) => ({
     },
   }));
   
-  const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: '#3A448C'
-  
-  }));
+  // const SearchIconWrapper = styled('div')(({ theme }) => ({
+  //   padding: theme.spacing(0, 2),
+  //   height: '100%',
+  //   position: 'absolute',
+  //   display: 'flex',
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  //   color: '#3A448C',
+    
+  // }));
   
   const StyledPaper = styled(Paper)(({ theme }) => ({
     display: 'flex',
@@ -81,7 +81,7 @@ function NaviBar() {
     // Get the current path from the location object
     const currentPath = location.pathname;  
     // navigate is used to go to search page while passing parameters
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const [searchInput, setSearchInput] = useState("");
     const [menu, setMenu] = useState(null);
 
@@ -158,9 +158,9 @@ function NaviBar() {
          {/* search bar*/}
           <Search sx={{right:"20px"}}>
             <StyledPaper component="form" onSubmit={handleSubmit}>
-            <SearchIconWrapper sx={{backgroundColor: 'transparent'}}>
-              <SearchIcon />
-            </SearchIconWrapper>
+            {/* <SearchIconWrapper sx={{backgroundColor: 'transparent'}}> */}
+            <LinkTab icon={<SearchIcon />} iconPosition="start" href="/searchpage" sx={{color: "#781208"}} />
+            {/* </SearchIconWrapper> */}
               <StyledInputBase
                 placeholder="Search…"
                 inputProps={{ 'aria-label': 'search' }}
@@ -170,20 +170,25 @@ function NaviBar() {
               />
             </StyledPaper>
           </Search>
+          
 
-          <div onMouseEnter={handleOpen} onMouseLeave={handleClose}>
+         
             <IconButton
               size="large"
               edge="start"
               color="inherit"
               aria-label="open drawer"
-              sx={{ mr: 2 }}
               onClick={toggleDrawer('left', true)}
             >
             <a href="/profile">
               <button className={styles.profileBtn}><AccountCircleIcon fontSize="large" sx={{color:"black"}}/></button>
             </a>
             </IconButton>
+          
+          </div>
+
+          <div onMouseEnter={handleOpen} onMouseLeave={handleClose}>
+            <span style={{ fontSize: '24px' , color: 'black', marginRight: '10px', marginTop: '100px'}}>&#x25BC;</span>
           </div> 
           <Menu
         menu={menu}
@@ -204,15 +209,14 @@ function NaviBar() {
       >
         <div onMouseLeave={handleClose}>
               <LinkTab iconPosition="start"label="Account Management" href="/profile"  sx={{ display: 'block' }}/>
-              <LinkTab iconPosition="start" label="Coin Shop" href="/coin"  sx={{ display: 'block' }}/>
+              <LinkTab iconPosition="start" label="Coin Shop" href="/profile"  sx={{ display: 'block' }}/>
               <LinkTab iconPosition="start" label="Edit Topics" href="/survey"  sx={{ display: 'block' }}/>
               <LinkTab  iconPosition="start" label="Bookmarks" href="/liked"  sx={{ display: 'block' }}/>
-              <LinkTab  iconPosition="start" label="Accessibility" href="/access"  sx={{ display: 'block' }} />
-              <LinkTab  iconPosition="start" label="Notifications" href="/notif"  sx={{ display: 'block' }}/>
+              <LinkTab  iconPosition="start" label="Accessibility" href="/profile"  sx={{ display: 'block' }} />
+              <LinkTab  iconPosition="start" label="Notifications" href="/profile"  sx={{ display: 'block' }}/>
               <LinkTab iconPosition="start" label="Privacy" href="/profile"  sx={{ display: 'block' }} />
         </div>
       </Menu>
-          </div>
       
          
         </StyledToolbar>

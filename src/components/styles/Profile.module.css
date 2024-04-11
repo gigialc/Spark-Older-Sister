@@ -26,6 +26,7 @@
     width: fit-content; /* adjust as needed */
     font-weight: bold;
     text-align: left;
+    margin-top: 0px;
   }
 
 
@@ -145,7 +146,7 @@
 
 
 .check{
-  margin-top: 5px;
+  margin-bottom: 10px;
   font-size: 15px;
   font-weight: bold;
 }
@@ -272,12 +273,13 @@ main.Profile{
 
 @media screen and (max-width: 700px) {
 
-  .rightChildTop h1{
-    font-size: 30px;
-}
 .welcome{
   display: none;
 }
+.dboard{
+  grid-template-columns: 1fr;
+}
+
   }
   
   
