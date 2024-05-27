@@ -1,5 +1,5 @@
 import {BrowserRouter as Router,Routes,Route,Link} from "react-router-dom";
-import Login from './components/Login';
+// import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Survey from './components/Survey';
 import Register from './components/Register';
@@ -9,16 +9,15 @@ import Insights from "./components/scripts/insights";
 import Profile from "./components/Profile";
 import ContributorPage from "./components/ContributorFeed";
 import LikedArticles from "./components/LikedArticles";
-import Coin from "./components/Coin.js";
-import Access from "./components/Access.js";
-import Notif from "./components/Notif.js";
+// import Coin from "./components/Coin.js";
+// import Access from "./components/Access.js";
+// import Notif from "./components/Notif.js";
 import Searchpage from "./components/Searchpage.js";
 import { OpenAI } from './components/scripts/openAI'
-<<<<<<< Updated upstream
-//hello lol 
-=======
+
+
 import Welcome from './components/welcome';
->>>>>>> Stashed changes
+
 
 function App() {
   return (

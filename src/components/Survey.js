@@ -120,7 +120,7 @@ function Survey() {
       <NaviBar />
       <div className={styles.dboard} >
         <div className={styles.welcome}>
-          <Paper elevation={0} sx={{width:"100%"}} >
+          {/* <Paper elevation={0} sx={{width:"100%"}} >
           <Tabs value={email} aria-label="nav tabs example" orientation="vertical" sx={{display: 'flex', justifyContent: 'flex-start', backgroundColor:"#f2f2f2"}}>
             <br></br>
             <br></br>
@@ -132,10 +132,9 @@ function Survey() {
             <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Notifications" href="/profile" />
             <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Privacy" href="/profile" />
             
-            {/* <br></br> */}
             <LinkTab icon={<LogoutIcon />} iconPosition="start" label="Logout" href="/register" sx={{position: "relative",  justifyContent: 'flex-start'}}/>
           </Tabs>
-        </Paper>
+        </Paper> */}
         </div>
 
 
@@ -143,7 +142,7 @@ function Survey() {
           
         <main className={styles.survey}>
       <div>
-            <h1 className = {styles.title}>Edit Topics</h1>
+            <h1 className = {styles.title}>Edit topics</h1>
       
       <p className={styles.message}>Customize your article feed</p>
       
@@ -210,7 +209,7 @@ function Survey() {
           borderRadius: "20px",
           padding: "6px 12px",
           fontWeight: "bold",
-          fontSize: "25px",
+          fontSize: "20px",
           marginTop: '10px',
           left: '200px',
           }}>

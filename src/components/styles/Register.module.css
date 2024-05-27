@@ -6,26 +6,6 @@ body {
   background-color: #f5f5f5;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-.container{
-  height: 100vh;
-  background: linear-gradient(to right, pink,  rgb(255, 72, 103), #ffbd60);
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows:  auto;
-  grid-template-areas:
-  ". . . "
-  "l . . "
-  "ll . r"
-  ". slogan . "
-=======
->>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
->>>>>>> Stashed changes
-
 .container {
   display: flex;
   flex-direction: column;
@@ -49,7 +29,9 @@ body {
   padding-left: 100px;
   font-family: 'Montserrat', sans-serif;
   color: #84003B;
-=======
+  font-size: 2.5rem;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -74,64 +56,25 @@ body {
 }
 
 .logoText {
->>>>>>> Stashed changes
+
   font-weight: 700;
   font-size: 2.5rem;
 }
 
-<<<<<<< Updated upstream
-.right {
-  width: 90%;
-  max-width: 400px; /* Adjust based on your preference for form width */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -100px; 
-}
-
-/* this is outside of the grid cuz it dont fit and idk how to fix it  */
-.slogan{
-  grid-area: slogan;
-  width: 110%;
-  justify-self: center;
-  font-size: 18px;
-  color: #D4473B;
-  font-family: 'Montserrat', sans-serif;
-}
-
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-.registerButton{
-  background-color: pink;
-  border-radius: 20px;
-  font-size: 18px;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  border: none;
-  font-weight: 600;
-  padding: 5px 25px;
-  text-transform: uppercase;
-  transition: background 0.8s linear;
-  margin: 20px;
-=======
->>>>>>> Stashed changes
 .signInBtn, .registerButton {
   padding: 10px 20px; /* Adjust padding to your liking, added horizontal padding */
   border: none; /* Remove border if not needed */
   border-radius: 20px; /* Rounded corners */
   cursor: pointer; /* Indicates clickable items */
   background-color: #b666d2; /* Example background color */
-  color: white; /* Text color */
+  color: black; /* Text color */
   font-family: 'Montserrat', sans-serif; /* Maintain font consistency */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
   justify-self: center; /* Center the button */
   display: inline-block; /* Make the element only as wide as its content */
   text-align: center; /* Ensure text is centered */
-<<<<<<< Updated upstream
-=======
->>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
->>>>>>> Stashed changes
+
+
 }
 
 .signInBtn:hover, .registerButton:hover {
@@ -151,7 +94,7 @@ p {
   text-align: center; /* Center-align the text */
   margin: 20px 0; /* Add some spacing around the paragraph */
 }
-=======
+
 .welcome h2 {
   color: palevioletred;
   font-size: 2rem;
@@ -264,4 +207,4 @@ p {
 .socialButton:hover {
   background-color: #e5e5e5;
 }
->>>>>>> Stashed changes
+

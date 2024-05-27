@@ -24,6 +24,7 @@ body {
   background-color: white;
   padding: 10px;
   flex-grow: 1;
+  text-decoration: none; /* Remove underline */
 }
 
 .logoImage {

@@ -3,15 +3,10 @@ import { useNavigate } from 'react-router-dom'
 import React, { useEffect, useState } from 'react';
 import { getAuth } from "firebase/auth";
 import { getFirestore, getDoc } from "firebase/firestore";
-
 import NaviBar from './NavigationBar';
-
 import Box from '@mui/material/Box';
-
 import {Paper} from '@mui/material'
-
 import styles from './styles/Profile.module.css';
-
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -20,14 +15,13 @@ import ArticleIcon from '@mui/icons-material/Article';
 import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
 import LogoutIcon from '@mui/icons-material/Logout';
 import Avatar from '@mui/material/Avatar';
-
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 function Profile() {
     //defining our variables that will be used within the dashboard
@@ -419,12 +413,11 @@ function Profile() {
         
         <NaviBar />
         <div className={styles.dboard} >
-          <div className={styles.welcome}>
+          {/* <div className={styles.welcome}>
             <Paper elevation={0} sx={{width:"100%"}} >
             <Tabs value={email} aria-label="nav tabs example" orientation="vertical" sx={{display: 'flex', justifyContent: 'flex-start', backgroundColor:"#f2f2f2"}}>
               <br></br>
-              <br></br>
-              <LinkTab icon={<AccountCircleIcon />} iconPosition="start"label="Account Management" href="/profile" />
+              <LinkTab icon={<AccountCircleIcon />} iconPosition="start"label="Profile" href="/profile" />
               <LinkTab icon={<DashboardCustomizeIcon />} iconPosition="start" label="Coin Shop" href="/profile" />
               <LinkTab icon={<DashboardCustomizeIcon />} iconPosition="start" label="Edit Topics" href="/survey" />
               <LinkTab icon={<FavoriteIcon />} iconPosition="start" label="Bookmarks" href="/liked" />
@@ -432,18 +425,16 @@ function Profile() {
               <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Notifications" href="/profile" />
               <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Privacy" href="/profile" />
               
-              {/* <br></br> */}
+            
               <LinkTab icon={<LogoutIcon />} iconPosition="start" label="Logout" href="/register" sx={{position: "relative",  justifyContent: 'flex-start'}}/>
             </Tabs>
           </Paper>
-          </div>
-
-
+          </div> */}
           <Paper  className={styles.articlePaper} elevation={0} sx={{ backgroundColor: '#f2f2f2' }}>
             
           <div className={styles.name}>
               {/* <AccountCircleIcon className={styles.icon} /> */}
-              <Avatar sx={{ width: 200, height: 200 , fontSize:'2.5em', borderRadius:'70px'}}>
+              <Avatar sx={{ width: 100, height:100 , fontSize:'2.5em', borderRadius:'70px'}}>
                 {email ? email.charAt(0) : ''}
               </Avatar>
 
@@ -475,8 +466,6 @@ function Profile() {
                   <Checkbox checked={checked} onChange={handleCheckboxChange} sx={{color:"#ef6448"}}/>
                   <span >Use Username instead of Personal Name for Account</span>
                 </div>
-               
-
 
                 <div className={styles.nameinput}>
                   <div className ={styles.field}>
@@ -543,7 +532,7 @@ function Profile() {
           borderRadius: "20px",
           padding: "6px 12px",
           fontWeight: "bold",
-          fontSize: "25px",
+          fontSize: "20px",
           marginTop: '20px',
           marginLeft: '28%',
           }}>

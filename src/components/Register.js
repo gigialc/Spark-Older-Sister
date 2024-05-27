@@ -47,40 +47,6 @@ function Register() {
 
     return (
         <div className={styles.container}>
-<<<<<<< Updated upstream
-            <div className={styles.logo2}>
-<<<<<<< Updated upstream
-                <h1>Older Sister</h1>
-            </div>
-=======
-<<<<<<< HEAD
-             <h1>Older Sister</h1>
-             </div>
-=======
-                <h1>Older Sister</h1>
-            </div>
->>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
->>>>>>> Stashed changes
-            <div className={styles.right}>
-                <form>
-                <div style={{ paddingTop: "20px" }}> {/* Adjust paddingTop as needed */}
-                <TextField size="small"
-                                label="Email"
-                                variant="outlined"
-                                required
-                                onChange={e => setEmail(e.target.value)}
-                                style={{ width: '100%', marginBottom: '10px' }} // Reduced marginBottom
-                        />
-                    </div>
-                    <div>
-                <TextField size="small"
-                                label="Password"
-                                variant="outlined"
-                                required
-                                type="password"
-                                onChange={e => setPassword(e.target.value)}
-                                style={{ width: '100%', marginBottom: '20px' }} // Adjust marginBottom as needed
-=======
             <div className={styles.logo}>
                 <img src={logo} alt="Older Sister Logo" className={styles.logoImage} />
                 <h1>Older Sister.</h1>
@@ -107,7 +73,6 @@ function Register() {
                                    type="password"
                                    onChange={e => setPassword(e.target.value)}
                                    className={styles.inputField}
->>>>>>> Stashed changes
                         />
                     </div>
                     <a href="#" className={styles.forgotPassword} onClick={forgotPassword}>Forgot Password?</a>
@@ -116,12 +81,6 @@ function Register() {
                     </button>
                 </form>
                 {error && <p className={styles.error}>{error}</p>}
-<<<<<<< Updated upstream
-                <p>Don't have an account? Create one here!</p>
-<<<<<<< Updated upstream
-                <button className={styles.registerButton} onClick={createAccount}>
-                    Create an account
-=======
                 <p className={styles.noAccount}>No Account? <a href="#" onClick={createAccount} className={styles.signUp}>Create Account</a></p>
                 <button className={`${styles.socialButton} ${styles.googleButton}`}>
                     {/* <img src="google-icon.png" alt="Google Icon" className={styles.icon} /> */}
@@ -130,20 +89,7 @@ function Register() {
                 <button className={`${styles.socialButton} ${styles.appleButton}`}>
                     {/* <img src="apple-icon.png" alt="Apple Icon" className={styles.icon} /> */}
                     Log in with Apple
->>>>>>> Stashed changes
                 </button>
-=======
-<<<<<<< HEAD
-                <button className={styles.registerButton} onClick={createAccount}>Create an account</button>
-            </div>
-            <div className={styles.slogan}>
-
-=======
-                <button className={styles.registerButton} onClick={createAccount}>
-                    Create an account
-                </button>
->>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
->>>>>>> Stashed changes
             </div>
         </div>
     );

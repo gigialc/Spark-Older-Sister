@@ -28,10 +28,6 @@ const CustomTypography = styled(Typography)(({ theme }) => ({
         fontFamily: 'Montserrat, sans-serif',
         fontWeight: 'bold'
       }));
-
-      const API_KEY = "process.env.API_KEY";
-
-
 function Search() {
   // Defining variables used throughout this file
   const location = useLocation()
@@ -41,8 +37,6 @@ function Search() {
   const [links, setLinks] = useState([])
   const [fullContent, setFullContent] = useState([])
   const navigate = useNavigate()
-const API_KEY ="AIzaSyC-44Luso6FH_9opJC4d82MZj90C9UMQwY";
-
 
   // For testing purposes: when the generate summary button is clicked, we will check each link
   // 1) if its in our database already, do nothing
@@ -178,14 +172,14 @@ const API_KEY ="AIzaSyC-44Luso6FH_9opJC4d82MZj90C9UMQwY";
 
 export default Search;
 
-  
+  // This is the API key for the Google PSE - Google cloud 
 
-/*
 
-fetch('https://www.googleapis.com/customsearch/v1?key=INSERT_YOUR_API_KEY&cx=017576662512468239146:omuauf_lfve&q=lectures')
 
-.then(response => response.json())
+// fetch('https://www.googleapis.com/customsearch/v1?key=INSERT_YOUR_API_KEY&cx=017576662512468239146:omuauf_lfve&q=lectures')
 
-.then(data => console.log(data))
+// .then(response => response.json())
 
-.catch(error => console.error(error));*/
+// .then(data => console.log(data))
+
+// .catch(error => console.error(error));

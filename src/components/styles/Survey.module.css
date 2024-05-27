@@ -1,15 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .survey{
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-  background: linear-gradient(to right, pink,  rgb(255, 72, 103), #ffbd60);
+
+  /* background: linear-gradient(to right, pink,  rgb(255, 72, 103), #ffbd60); */
   height:100vh;
   width:100vw;
-=======
->>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
->>>>>>> Stashed changes
   overflow: hidden;
 
 }
@@ -18,16 +13,23 @@
   display: flex;
   width: fit-content;
   text-align: left;
-  margin-top: 150px;
-  font-size: 10vh;
+  margin-top: 80px;
+  font-size: 5vh;
   color: #781208;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 5%;
+
 }
 
 
 .message{
-    font-size: 2vh;
+    font-size: 3vh;
     text-align: left;
-    margin-left: 1%;
+    margin-left: 5%;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
 }
 
 .chipContainer {
