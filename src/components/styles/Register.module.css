@@ -4,6 +4,24 @@ body {
   margin: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+.container{
+  height: 100vh;
+  background: linear-gradient(to right, pink,  rgb(255, 72, 103), #ffbd60);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:  auto;
+  grid-template-areas:
+  ". . . "
+  "l . . "
+  "ll . r"
+  ". slogan . "
+=======
+>>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
+>>>>>>> Stashed changes
 
 .container {
   display: flex;
@@ -62,6 +80,23 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+.registerButton{
+  background-color: pink;
+  border-radius: 20px;
+  font-size: 18px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  font-weight: 600;
+  padding: 5px 25px;
+  text-transform: uppercase;
+  transition: background 0.8s linear;
+  margin: 20px;
+=======
+>>>>>>> Stashed changes
 .signInBtn, .registerButton {
   padding: 10px 20px; /* Adjust padding to your liking, added horizontal padding */
   border: none; /* Remove border if not needed */
@@ -74,6 +109,10 @@ body {
   justify-self: center; /* Center the button */
   display: inline-block; /* Make the element only as wide as its content */
   text-align: center; /* Ensure text is centered */
+<<<<<<< Updated upstream
+=======
+>>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
+>>>>>>> Stashed changes
 }
 
 .signInBtn:hover, .registerButton:hover {

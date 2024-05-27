@@ -181,8 +181,17 @@ main.Profile{
     position: fixed;
     height: 100px;
     width: 100%; 
+<<<<<<< Updated upstream
     background: #FFEDFD;
     background-color: #FFEDFD;
+=======
+<<<<<<< HEAD
+    background: linear-gradient(to right, pink,  rgb(255, 72, 103), #ffbd60);
+=======
+    background: #FFEDFD;
+    background-color: #FFEDFD;
+>>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
+>>>>>>> Stashed changes
     
   }
   

@@ -14,6 +14,7 @@ import Access from "./components/Access.js";
 import Notif from "./components/Notif.js";
 import Searchpage from "./components/Searchpage.js";
 import { OpenAI } from './components/scripts/openAI'
+//hello lol 
 
 function App() {
   return (

@@ -35,8 +35,18 @@ function Register() {
     return (
         <div className={styles.container}>
             <div className={styles.logo2}>
+<<<<<<< Updated upstream
                 <h1>Older Sister</h1>
             </div>
+=======
+<<<<<<< HEAD
+             <h1>Older Sister</h1>
+             </div>
+=======
+                <h1>Older Sister</h1>
+            </div>
+>>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
+>>>>>>> Stashed changes
             <div className={styles.right}>
                 <form>
                 <div style={{ paddingTop: "20px" }}> {/* Adjust paddingTop as needed */}
@@ -64,9 +74,22 @@ function Register() {
                 </form>
                 {error && <p className={styles.error}>{error}</p>}
                 <p>Don't have an account? Create one here!</p>
+<<<<<<< Updated upstream
                 <button className={styles.registerButton} onClick={createAccount}>
                     Create an account
                 </button>
+=======
+<<<<<<< HEAD
+                <button className={styles.registerButton} onClick={createAccount}>Create an account</button>
+            </div>
+            <div className={styles.slogan}>
+
+=======
+                <button className={styles.registerButton} onClick={createAccount}>
+                    Create an account
+                </button>
+>>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
+>>>>>>> Stashed changes
             </div>
         </div>
     );

@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .survey{
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  background: linear-gradient(to right, pink,  rgb(255, 72, 103), #ffbd60);
+  height:100vh;
+  width:100vw;
+=======
+>>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
+>>>>>>> Stashed changes
   overflow: hidden;
 
 }

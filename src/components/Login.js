@@ -11,6 +11,26 @@
 //     const [password, setPassword] = useState("");
 //     const navigate = useNavigate();
     
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    return (
+        <main className={styles.buttonContainer}>
+            <h1 className={styles.logo}>Older Sister.</h1>
+            <h2 className={styles.logo2}>Empowering women to love their bodies</h2>
+            <div className={styles.buttonWrapper}>
+                <button className={styles.login}>
+                    <Link to={"/register"} style={{textDecoration:'none', color: '#3A448C'}}>
+                        Register/Login
+                    </Link>
+                </button>
+            </div>
+        </main>
+    );
+}
+=======
+>>>>>>> 73160ff40afb0514ab4f5f7f521b88daa8573396
+>>>>>>> Stashed changes
 
 //     const signIn = e => {
 //         e.preventDefault();
