@@ -69,24 +69,24 @@ function Insights() {
     return(
         <section> 
           <div>
-            <p style= {{display: 'inline', fontSize: '35px', fontFamily: 'Montserrat', fontWeight:'bold', color:'#3A448C'}}>
+            <p style= {{display: 'inline', fontSize: '15px', fontFamily: 'Montserrat', fontWeight:'bold', color:'#3A448C'}}>
                 {((totalTopics/totalUsers) * 100).toFixed(1)}% {" "}
             </p>
-            <p style= {{display: 'inline', fontSize: '20px', fontFamily: 'Montserrat', fontWeight:'bold', color:'#5E5E5E'}}>
-                of users share some or all of the same topics as you.
+            <p style= {{display: 'inline', fontSize: '15px', fontFamily: 'Montserrat', fontWeight:'bold', color:'#5E5E5E'}}>
+                of users share some or all of the same topics as you, you're not alone!
             </p>
          </div>
-         <div>
-            <p style= {{display: 'inline', fontSize: '20px', fontFamily: 'Montserrat', fontWeight:'bold', color:'#5E5E5E'}}>
+         {/* <div>
+            <p style= {{display: 'inline', fontSize: '15px', fontFamily: 'Montserrat', fontWeight:'bold', color:'#5E5E5E'}}>
                 Your topics make up {" "}
             </p>
-            <p style= {{display: 'inline', fontSize: '35px', fontFamily: 'Montserrat', fontWeight:'bold', color:'#3A448C'}}>
+            <p style= {{display: 'inline', fontSize: '15px', fontFamily: 'Montserrat', fontWeight:'bold', color:'#3A448C'}}>
                 {(sameTopic/totalNumTopics * 100).toFixed(1)}% {" "}
             </p>
-            <p style= {{display: 'inline', fontSize: '20px', fontFamily: 'Montserrat', fontWeight:'bold', color:'#5E5E5E'}}>
+            <p style= {{display: 'inline', fontSize: '15px', fontFamily: 'Montserrat', fontWeight:'bold', color:'#5E5E5E'}}>
                 of all selected topics on this platform
             </p>
-         </div>
+         </div> */}
         </section>
     );
 }

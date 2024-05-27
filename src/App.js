@@ -14,13 +14,18 @@ import Access from "./components/Access.js";
 import Notif from "./components/Notif.js";
 import Searchpage from "./components/Searchpage.js";
 import { OpenAI } from './components/scripts/openAI'
+<<<<<<< Updated upstream
 //hello lol 
+=======
+import Welcome from './components/welcome';
+>>>>>>> Stashed changes
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element = {<Register />} />
+        <Route path="/" element = {<Welcome />} />
+        <Route path="/register" element = {<Register />} />
         <Route path="/dashboard" element = {<Dashboard />}/>
         <Route path="/survey" element = {<Survey />} />
         {/* <Route path="/register" element = {<Register />} /> */}

@@ -2,8 +2,11 @@
 
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
@@ -46,21 +49,37 @@ body {
   padding-left: 100px;
   font-family: 'Montserrat', sans-serif;
   color: #84003B;
+=======
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #84052A;
+  margin-bottom: 20px;
+}
+
+.logoImage {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logoText {
+>>>>>>> Stashed changes
   font-weight: 700;
-  font-size: 50px;
-  line-height: 120px;
-
-
-}
-.logo3{
-  color: #D4473B;
-  position: absolute;
-  left: 100px;
-  font-size: 35px;
-  top: 73%;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
 }
 
+<<<<<<< Updated upstream
 .right {
   width: 90%;
   max-width: 400px; /* Adjust based on your preference for form width */
@@ -132,3 +151,117 @@ p {
   text-align: center; /* Center-align the text */
   margin: 20px 0; /* Add some spacing around the paragraph */
 }
+=======
+.welcome h2 {
+  color: palevioletred;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.formGroup {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.forgotPassword {
+  align-self: flex-end;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.signInBtn {
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 50%;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.signInBtn:hover {
+  background-color: palevioletred;
+  color: #fff;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.875rem;
+}
+
+.noAccount {
+  margin-top: 20px;
+  font-size: 0.875rem;
+}
+
+.signUp {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signUp:hover {
+  text-decoration: underline;
+}
+
+.socialButton {
+  /* add space  */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.googleButton {
+  background-color: #f5f5f5;
+  width: 50%;
+  margin-right: 1px;
+}
+
+.appleButton {
+  background-color: #f5f5f5;
+  width: 50%;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.socialButton:hover {
+  background-color: #e5e5e5;
+}
+>>>>>>> Stashed changes

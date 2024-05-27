@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.appBar {
+  background: white;
+  box-shadow: none;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px; /* Ensure there is padding on both sides */
+
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.logoImage {
+  width: 20px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logoText {
+  color: #84052A;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.iconButton {
+    margin-right: 16px;
+}
+
+.profileBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  justify-content: right;
+}
+
+.accountIcon {
+  color: black;
+  justify-content: right;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: left;
+}

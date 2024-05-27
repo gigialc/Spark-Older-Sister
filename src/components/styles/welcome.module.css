@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logoImage {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logoText {
+  color: #84052A;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.taglines {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  color:darkorchid;
+  border-color: darkorchid;
+  border-radius: 20px;
+}
+
+.tagline {
+  background-color: white;
+  border-radius: 20px;
+  border-color: darkorchid;
+  /* add color in the border */
+    border: 1px solid darkorchid;
+  padding: 5px 10px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color:darkorchid;
+}
+
+.mainText h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.mainText h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #333;
+  margin: 10px 0 20px;
+}
+
+.subText h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: purple;
+  margin-bottom: 20px;
+}
+
+.buttonContainer {
+  margin-top: 20px;
+}
+
+.findOutMoreButton {
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.findOutMoreButton:hover {
+  background-color: palevioletred;
+  color: #fff;
+}

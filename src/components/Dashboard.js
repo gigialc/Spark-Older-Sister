@@ -11,6 +11,7 @@ import Insights from './scripts/insights'
 import NaviBar  from "./NavigationBar";
 import AddIcon from '@mui/icons-material/Add';
 
+
 const Styled2Paper = styled(Paper)(({ theme }) => ({
   display: 'relative',
   width: '90%',
@@ -133,12 +134,10 @@ function Dashboard() {
             noWrap
             component="div"
             
-            sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' },  }}
-            whiteSpace= "pre-wrap"
+            sx={{ flexGrow: 1, display: {  fontSize: 20},  }}
 
-            
           >
-             Welcome{'\n'}{email}!
+             Welcome{'\n'}{email} 🧡
           </CustomTypography>
           
           <Insights/>

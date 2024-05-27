@@ -13,6 +13,7 @@ import NaviBar from "./NavigationBar";
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import {Paper} from '@mui/material'
+const API_KEY = process.env.GOOGLE_API_KEY;
 
 const Styled2Paper = styled(Paper)(({ theme }) => ({
         display: 'relative',
