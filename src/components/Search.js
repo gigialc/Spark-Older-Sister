@@ -27,6 +27,10 @@ const CustomTypography = styled(Typography)(({ theme }) => ({
         fontFamily: 'Montserrat, sans-serif',
         fontWeight: 'bold'
       }));
+
+      const API_KEY = "process.env.API_KEY";
+
+
 function Search() {
   // Defining variables used throughout this file
   const location = useLocation()
