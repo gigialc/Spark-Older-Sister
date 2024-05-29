@@ -27,7 +27,6 @@ function Survey() {
     // logged in user's email. Can be used later
     const [email, setEmail] = useState(null)
 
-
     // a user's topics and links to iterate over
     const [topics, setTopics] = useState([])
     const [links, setLinks] = useState([])
@@ -45,6 +44,7 @@ function Survey() {
     } else {
       setSelectedTopics([...selectedTopics, topic]);
       setUrl([...urlList, link]);
+
     }
   }
 
@@ -73,10 +73,10 @@ function Survey() {
     }
   };
   
-  
   function StyledChip(props) {
     const { clicked, ...rest } = props;
     const [click, setClicked] = useState(false);
+
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -88,7 +88,7 @@ function Survey() {
         {...rest}
         avatar={<Checkbox checked={clicked} onChange={handleClick} />}
         sx={{
-          backgroundColor: clicked ? "light-grey" : "white",
+          backgroundColor: clicked ? "light-grey" : "orange",
           color: clicked ? "black" : "black",
           margin: 1
         }}
