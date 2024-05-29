@@ -2,7 +2,8 @@
 
 .survey{
 
-  /* background: linear-gradient(to right, pink,  rgb(255, 72, 103), #ffbd60); */
+  /* background: linear-gradient(to right, pink,  rgb(255, 72, 103), #ffbd60);  */
+  background:white;
   height:100vh;
   width:100vw;
   overflow: hidden;
@@ -14,7 +15,7 @@
   width: fit-content;
   text-align: left;
   margin-top: 80px;
-  font-size: 5vh;
+  font-size: 3vh;
   color: #781208;
   font-family: 'Montserrat', sans-serif;
   margin-left: 5%;
@@ -23,7 +24,7 @@
 
 
 .message{
-    font-size: 3vh;
+    font-size: 2vh;
     text-align: left;
     margin-left: 5%;
     color: black;
@@ -37,24 +38,34 @@
   width: 10%;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
   grid-auto-rows: minmax(10px, auto);   /* Minimum height for each row */
-  gap: 1px;                            
+  gap: 1px;     
+  
 }
 
 @media screen and (max-width: 1140px) {
   .chipContainer{
     margin-left: 5%;
-  margin-right: 5%;
+    margin-right: 5%;
+    /* background-color: #ffffff; */
+
   }
 }
 
 @media screen and (max-width: 700px) {
   .chipContainer{
     margin-left: 5%;
-  margin-right: 5%;
+    margin-right: 5%;
+    
   }
 }
+
 .chips{
   margin:10px;
+  box-shadow: 0 4px 8px rgba(152, 116, 140, 0.2); 
+  border: 1px solid darkorchid;
+  border-radius: 20px; /* Añade bordes redondeados */
+  border: 1px solid darkorchid;
+  
 }
 
 .submit{
@@ -62,8 +73,6 @@
   left: 52%; /* Move the button to the center horizontally */
   transform: translateX(-50%);
 }
-
-
 
 .dboard{
   height: 100vh; 
@@ -74,6 +83,7 @@
   grid-template-areas:
   "l articles "
 }
+
 .welcome{
   grid-area: l;
   padding-top: 50px;

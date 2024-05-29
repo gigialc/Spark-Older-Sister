@@ -145,7 +145,7 @@ function Survey() {
             <h1 className = {styles.title}>Edit topics</h1>
       
       <p className={styles.message}>Customize your article feed</p>
-      
+
       <div style={SurveyButton.containerStyle} className={styles.chipContainer}>
       
         <StyledChip className= {styles.chips}
@@ -153,47 +153,47 @@ function Survey() {
           onClick={() => handleTopicClick("Reproductivehealth","https://www.theskimm.com/wellness/why-is-my-period-blood-brown")}
           clicked={selectedTopics.includes("Reproductivehealth")}
         />
-        <StyledChip 
+        <StyledChip  className= {styles.chips}
           label="Breast Health"
           onClick={() => handleTopicClick("Breasthealth","https://www.healthline.com/health/womens-health/why-does-my-breast-hurt-when-i-press-it")}
           clicked={selectedTopics.includes("Breasthealth")}
         />
-        <StyledChip
+        <StyledChip className= {styles.chips}
           label="Mental Health"
           onClick={() => handleTopicClick("Mentalhealth","https://www.berkeleywellbeing.com/feeling-sad.html")}
           clicked={selectedTopics.includes("Mentalhealth")}
         />
-        <StyledChip
+        <StyledChip className= {styles.chips}
           label="Cardiovascular Health"
           onClick={() => handleTopicClick("Cardiovascularhealth", "https://www.mayoclinic.org/diseases-conditions/heart-palpitations/symptoms-causes/syc-20373196")}
           clicked={selectedTopics.includes("Cardiovascularhealth")}
         />
-        <StyledChip
+        <StyledChip className= {styles.chips}
           label="Bone Health"
           onClick={() => handleTopicClick("Bonehealth","https://www.healthline.com/health/bone-health/why-do-my-bones-crack-so-much")}
           clicked={selectedTopics.includes("Bonehealth")}
         />
-        <StyledChip
+        <StyledChip className= {styles.chips}
           label="Cancer"
           onClick={() => handleTopicClick("Cancer","https://www.cancerresearchuk.org/about-cancer/causes-of-cancer/can-cancer-be-prevented-0")}
           clicked={selectedTopics.includes("Cancer")}
         />
-        <StyledChip
+        <StyledChip className= {styles.chips}
           label="Autoimmune Diseases"
           onClick={() => handleTopicClick("Autoimmunediseases","https://www.healthline.com/health/autoimmune-disorders")}
           clicked={selectedTopics.includes("Autoimmunediseases")}
         />
-        <StyledChip
+        <StyledChip className= {styles.chips}
           label="Skin Health"
           onClick={() => handleTopicClick("Skinhealth","https://share.upmc.com/2018/04/dry-flaky-skin-on-face/")}
           clicked={selectedTopics.includes("Skinhealth")}
         />
-                <StyledChip
+        <StyledChip className= {styles.chips}
           label="Muscular Health"
           onClick={() => handleTopicClick("Muscularhealth","https://my.clevelandclinic.org/health/symptoms/22274-calf-muscle-pain")}
           clicked={selectedTopics.includes("Muscularhealth")}
         />
-                  <StyledChip
+        <StyledChip className= {styles.chips}
           label="Nutrition and Fitness"
           onClick={() => handleTopicClick("Nutritionandfitness","https://www.ndtv.com/health/weight-loss-diet-essential-nutrients-you-need-for-losing-weight-quickly-2098994")}
           clicked={selectedTopics.includes("Nutritionandfitness")}
@@ -204,7 +204,7 @@ function Survey() {
         {{ 
           display: "block", 
           width: "fit-content", 
-          backgroundColor: '#ffab2d',   //its just transparent now, TBF
+          backgroundColor: '#D4473B',
           color: 'white', 
           borderRadius: "20px",
           padding: "6px 12px",
