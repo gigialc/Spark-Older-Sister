@@ -1,4 +1,4 @@
-import styles from "./styles/Survey.module.css";
+import styles from "./styles/Topics.module.css";
 import { db } from "../firebase";
 import { doc, setDoc } from "firebase/firestore"; 
 import React, { useState } from 'react';
@@ -8,19 +8,13 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { getAuth } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
-import NaviBar from './NavigationBar';
 import Tab from '@mui/material/Tab';
-import Tabs from '@mui/material/Tabs';
 import {Paper} from '@mui/material'
 import { getFirestore } from "firebase/firestore";
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ArticleIcon from '@mui/icons-material/Article';
-import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
-import LogoutIcon from '@mui/icons-material/Logout';
 import Checkbox from '@mui/material/Checkbox';
+import footerImage from './footer-image.png';
 
-function Survey() {
+function Topics() {
   const auth = getAuth();
     const firestore = getFirestore();
     // navigate is used to go to search page while passing parameters
@@ -31,10 +25,10 @@ function Survey() {
     const [topics, setTopics] = useState([])
     const [links, setLinks] = useState([])
 
-  // Defining our variables that we will use for this page
-  const [urlList, setUrl] = useState([]);
-  const [selectedTopics, setSelectedTopics] = useState([]);
-  const navigate = useNavigate();
+    // Defining our variables that we will use for this page
+    const [urlList, setUrl] = useState([]);
+    const [selectedTopics, setSelectedTopics] = useState([]);
+    const navigate = useNavigate();
 
   // Sets an array that is updated when a user selecets/deselects a topic button
   function handleTopicClick(topic, link) {
@@ -72,7 +66,11 @@ function Survey() {
       navigate("/login");
     }
   };
-  
+       
+    const handleSkip = async (event) => {
+        navigate("/dashboard", { state: { uuid: auth.currentUser.uid} });
+    }
+
   function StyledChip(props) {
     const { clicked, ...rest } = props;
     const [click, setClicked] = useState(false);
@@ -87,15 +85,10 @@ function Survey() {
       <Chip
         {...rest}
         avatar={<Checkbox checked={clicked} onChange={handleClick} />}
-        sx={{
-          backgroundColor: clicked ? "light-grey" : "orange",
-          color: clicked ? "black" : "black",
-          margin: 1
-        }}
+       
       />
     );
   }
-  
   
   function LinkTab(props) {
     return (
@@ -113,40 +106,17 @@ function Survey() {
     );
   }
 
-
   return (
     <main > 
-      
-      <NaviBar />
       <div className={styles.dboard} >
-        <div className={styles.welcome}>
-          {/* <Paper elevation={0} sx={{width:"100%"}} >
-          <Tabs value={email} aria-label="nav tabs example" orientation="vertical" sx={{display: 'flex', justifyContent: 'flex-start', backgroundColor:"#f2f2f2"}}>
-            <br></br>
-            <br></br>
-            <LinkTab icon={<AccountCircleIcon />} iconPosition="start"label="Account Management" href="/profile" />
-            <LinkTab icon={<DashboardCustomizeIcon />} iconPosition="start" label="Coin Shop" href="/profile" />
-            <LinkTab icon={<DashboardCustomizeIcon />} iconPosition="start" label="Edit Topics" href="/survey" />
-            <LinkTab icon={<FavoriteIcon />} iconPosition="start" label="Bookmarks" href="/liked" />
-            <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Accessibility" href="/profile" />
-            <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Notifications" href="/profile" />
-            <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Privacy" href="/profile" />
-            
-            <LinkTab icon={<LogoutIcon />} iconPosition="start" label="Logout" href="/register" sx={{position: "relative",  justifyContent: 'flex-start'}}/>
-          </Tabs>
-        </Paper> */}
-        </div>
-
-
         <Paper  className={styles.articlePaper} elevation={0} sx={{ backgroundColor: '#f2f2f2' }}>
-          
-        <main className={styles.survey}>
-      <div>
-            <h1 className = {styles.title}>Edit topics</h1>
+           <main className={styles.survey}>
+        <div>
+        <h1 className = {styles.title}>What do you want to learn about?</h1>
       
-      <p className={styles.message}>Customize your article feed</p>
+        <p className={styles.message}>Customize your article feed</p>
 
-      <div style={SurveyButton.containerStyle} className={styles.chipContainer}>
+        <div style={SurveyButton.containerStyle} className={styles.chipContainer}>
       
         <StyledChip className= {styles.chips}
           label="Reproductive Health"
@@ -198,35 +168,51 @@ function Survey() {
           onClick={() => handleTopicClick("Nutritionandfitness","https://www.ndtv.com/health/weight-loss-diet-essential-nutrients-you-need-for-losing-weight-quickly-2098994")}
           clicked={selectedTopics.includes("Nutritionandfitness")}
         />
-      </div>
-        <Button component={Link}  color="primary" onClick={handleSubmit} className={styles.submit} 
+        </div>
+        <Button component={Link}  color="primary" onClick={handleSubmit}
         sx=
         {{ 
           display: "block", 
           width: "fit-content", 
-          backgroundColor: '#D4473B',
+          backgroundColor: 'fuchsia',
           color: 'white', 
           borderRadius: "20px",
           padding: "6px 12px",
           fontWeight: "bold",
           fontSize: "20px",
-          marginTop: '10px',
-          left: '200px',
-          }}>
+          marginTop: '30px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+
+        }}>
         Submit
         </Button>
+
+        <Button component={Link}  color="primary" onClick={handleSkip} className={styles.skip}
+        sx=
+        {{ 
+        //   display: "block", 
+        //   width: "fit-content", 
+        //   backgroundColor: '#D4473B',
+        //   color: 'white', 
+        //   borderRadius: "20px",
+        //   padding: "6px 12px",
+        //   fontWeight: "bold",
+        //   fontSize: "20px",
+        // //   marginTop: '10px',
+        // //   marginLeft: '10px',
+        }}>
+        Skip
+        </Button>
      
-      </div>
-    </main>
-
-
-
+        </div>
+        </main>
+        
         </Paper>
-
+        <img src={footerImage} alt="Footer" className={styles.footerImage} />
       </div>
   </main>
   );
 }
 
-export default Survey;
-
+export default Topics;

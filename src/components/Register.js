@@ -17,7 +17,7 @@ function Register() {
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
             .then(auth => {
-                navigate("/survey");
+                navigate("/dashboard");
             })
             .catch(error => setError(error.message)); // Set error state
     }
@@ -28,7 +28,7 @@ function Register() {
         createUserWithEmailAndPassword(auth, email, password)
             .then(auth => {
                 if (auth) {
-                    navigate("/");
+                    navigate("/topics");
                 }
             })
             .catch(error => setError(error.message)); // Set error state

@@ -1,0 +1,105 @@
+.dboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.articlePaper {
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+
+.survey {
+    text-align: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.message {
+    font-size: 20px;
+    color: grey;
+    margin-bottom: 20px;
+
+}
+
+.chipContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.chips {
+    background-color: #f2f2f2;
+    border: 1px solid lightgrey;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chips:hover {
+    background-color: #e0e0e0;
+}
+
+.chips.selected {
+    background-color: darkorchid;
+    color: white;
+    border: none;
+}
+
+.submit {
+    display: block;
+    width: 100px;
+    background-color: darkorchid;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: darkorchid;
+}
+
+.skip {
+    display: block;
+    width: fit-content;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footerImage {
+    width: 100%;
+    height: auto;
+    align-self: flex-end;
+}
