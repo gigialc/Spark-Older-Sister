@@ -49,9 +49,9 @@ function Welcome() {
       <div className={styles.subText}>
         <h4>That’s why we put it all in one place.</h4>
       </div>
-      <div className={styles.buttonContainer}>
+      {/* <div className={styles.buttonContainer}>
         <button className={styles.findOutMoreButton} onClick={register}>FIND OUT MORE</button>
-      </div>
+      </div> */}
 
       <div className={styles.emailContainer}>
                 <input
