@@ -1,11 +1,9 @@
-import React from "react";
-import styles from "./styles/Register.module.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import TextField from '@mui/material/TextField';
 import logo from "./logo.png";
-
+import styles from "./styles/Register.module.css";
 
 function Register() {
     const [email, setEmail] = useState("");
@@ -13,31 +11,34 @@ function Register() {
     const [error, setError] = useState(""); // State for handling errors
     const navigate = useNavigate();
 
-    const signIn = e => {
+    const signIn = (e) => {
         e.preventDefault();
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
-            .then(auth => {
+            .then((auth) => {
                 navigate("/dashboard");
             })
-            .catch(error => setError(error.message)); // Set error state
-    }
+            .catch((error) => setError(error.message)); // Set error state
+    };
 
-    const createAccount = e => {
+    const createAccount = (e) => {
         e.preventDefault();
         navigate("/createAccount");
     };
 
-    const forgotPassword = e => {
+    const forgotPassword = (e) => {
         e.preventDefault();
+        if (!email) {
+            setError("Please enter your email address.");
+            return;
+        }
         const auth = getAuth();
-        auth.sendPasswordResetEmail(email)
+        sendPasswordResetEmail(auth, email)
             .then(() => {
                 alert("Password reset email sent!");
             })
-           .catch(error => setError(error.message)); // Set error state
-    }
-
+            .catch((error) => setError(error.message)); // Set error state
+    };
 
     return (
         <div className={styles.container}>
@@ -52,7 +53,7 @@ function Register() {
                 <form className={styles.form}>
                     <div className={styles.formGroup}>
                         <TextField size="small"
-                                   label="Enter Username/Email"
+                                   label="Enter Email"
                                    variant="outlined"
                                    required
                                    onChange={e => setEmail(e.target.value)}
@@ -69,7 +70,7 @@ function Register() {
                                    className={styles.inputField}
                         />
                     </div>
-                    <a href="#" className={styles.forgotPassword} onClick={forgotPassword}>Forgot Password?</a>
+                    <a className={styles.forgotPassword} onClick={forgotPassword}>Forgot Password?</a>
                     <button type="submit" onClick={signIn} className={styles.signInBtn}>
                         LOG IN
                     </button>
@@ -90,5 +91,3 @@ function Register() {
 }
 
 export default Register;
-
-
