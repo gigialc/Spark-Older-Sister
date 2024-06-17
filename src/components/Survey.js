@@ -88,7 +88,7 @@ function Survey() {
         {...rest}
         avatar={<Checkbox checked={clicked} onChange={handleClick} />}
         sx={{
-          backgroundColor: clicked ? "light-grey" : "orange",
+          backgroundColor: clicked ? "light-grey" : "pink",
           color: clicked ? "black" : "black",
           margin: 1
         }}
@@ -120,23 +120,7 @@ function Survey() {
       <NaviBar />
       <div className={styles.dboard} >
         <div className={styles.welcome}>
-          {/* <Paper elevation={0} sx={{width:"100%"}} >
-          <Tabs value={email} aria-label="nav tabs example" orientation="vertical" sx={{display: 'flex', justifyContent: 'flex-start', backgroundColor:"#f2f2f2"}}>
-            <br></br>
-            <br></br>
-            <LinkTab icon={<AccountCircleIcon />} iconPosition="start"label="Account Management" href="/profile" />
-            <LinkTab icon={<DashboardCustomizeIcon />} iconPosition="start" label="Coin Shop" href="/profile" />
-            <LinkTab icon={<DashboardCustomizeIcon />} iconPosition="start" label="Edit Topics" href="/survey" />
-            <LinkTab icon={<FavoriteIcon />} iconPosition="start" label="Bookmarks" href="/liked" />
-            <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Accessibility" href="/profile" />
-            <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Notifications" href="/profile" />
-            <LinkTab icon={<ArticleIcon />} iconPosition="start" label="Privacy" href="/profile" />
-            
-            <LinkTab icon={<LogoutIcon />} iconPosition="start" label="Logout" href="/register" sx={{position: "relative",  justifyContent: 'flex-start'}}/>
-          </Tabs>
-        </Paper> */}
         </div>
-
 
         <Paper  className={styles.articlePaper} elevation={0} sx={{ backgroundColor: '#f2f2f2' }}>
           

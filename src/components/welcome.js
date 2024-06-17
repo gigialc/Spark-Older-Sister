@@ -4,6 +4,7 @@ import logo from './logo.png';
 import { useState } from "react";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
+import HomePageOS from './HomePageOS.png';
 
 function Welcome() {
     const [email, setEmail] = useState("");
@@ -69,7 +70,22 @@ function Welcome() {
                 </button>
             </div>
 
+            <br />
+            <br />
+            <br />
+            <div className={styles.phoneContainer}>
+                <img src={HomePageOS} alt="Older Sister Logo" className={styles.phoneImage} />
+            </div>
+            <br />
+            <br />
+
+            <div className={styles.footer}>
+                <p>© 2024 Older Sister. All rights reserved.</p>
+            </div>
+
     </div>
+
+
   );
 }
 
