@@ -81,10 +81,10 @@ function Register() {
                     {/* <img src="google-icon.png" alt="Google Icon" className={styles.icon} /> */}
                     Login with Google
                 </button>
-                <button className={`${styles.socialButton} ${styles.appleButton}`}>
-                    {/* <img src="apple-icon.png" alt="Apple Icon" className={styles.icon} /> */}
+                {/* <button className={`${styles.socialButton} ${styles.appleButton}`}>
+                    
                     Log in with Apple
-                </button>
+                </button> */}
             </div>
         </div>
     );
