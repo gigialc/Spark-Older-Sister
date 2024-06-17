@@ -84,7 +84,6 @@ function Welcome() {
 
           {/* add a section where it says that with a subscription you can have accress to women's healthcare */}
           <div className={styles.subscriptionSection}>
-                <h2>Premium Package</h2>
                 <h3>$50/month</h3>
                 <ul>
                     <li>Contraception</li>
