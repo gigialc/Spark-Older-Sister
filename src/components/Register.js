@@ -6,6 +6,7 @@ import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } f
 import TextField from '@mui/material/TextField';
 import logo from "./logo.png";
 
+
 function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -24,14 +25,7 @@ function Register() {
 
     const createAccount = e => {
         e.preventDefault();
-        const auth = getAuth();
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(auth => {
-                if (auth) {
-                    navigate("/topics");
-                }
-            })
-            .catch(error => setError(error.message)); // Set error state
+        navigate("/createAccount");
     };
 
     const forgotPassword = e => {
@@ -81,7 +75,7 @@ function Register() {
                     </button>
                 </form>
                 {error && <p className={styles.error}>{error}</p>}
-                <p className={styles.noAccount}>No Account? <a href="#" onClick={createAccount} className={styles.signUp}>Create Account</a></p>
+                <p className={styles.noAccount}>No Account? <a onClick={createAccount} className={styles.signUp}>Create Account</a></p>
                 <button className={`${styles.socialButton} ${styles.googleButton}`}>
                     {/* <img src="google-icon.png" alt="Google Icon" className={styles.icon} /> */}
                     Login with Google

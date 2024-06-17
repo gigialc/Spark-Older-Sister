@@ -38,8 +38,8 @@ function Welcome() {
         <h1 className={styles.logoText}>Older Sister</h1>
       </div>
       <div className={styles.taglines}>
-        <span className={styles.tagline}>RELIABLE</span>
-        <span className={styles.tagline}>FACT CHECKED</span>
+        <span className={styles.tagline}>BEAUTY</span>
+        <span className={styles.tagline}>SELF-CARE</span>
         <span className={styles.tagline}>AI-PERSONALIZED</span>
       </div>
       <div className={styles.mainText}>

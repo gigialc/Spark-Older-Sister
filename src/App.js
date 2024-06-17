@@ -16,6 +16,7 @@ import Searchpage from "./components/Searchpage.js";
 import { OpenAI } from './components/scripts/openAI'
 import Topics from './components/topics';
 import Welcome from './components/welcome';
+import CreateAccount from './components/createAccount.js';
 
 
 function App() {
@@ -26,8 +27,8 @@ function App() {
         <Route path="/topics" element = {<Topics/>} />
         <Route path="/register" element = {<Register />} />
         <Route path="/dashboard" element = {<Dashboard />}/>
+        <Route path="/createAccount" element = {<CreateAccount />} />
         <Route path="/survey" element = {<Survey />} />
-        {/* <Route path="/register" element = {<Register />} /> */}
         <Route path="/summarization" element = {<OpenAI />} />
         <Route path="/search" element = {<Search />} />
         <Route path="/contributor" element = {<FormComponent />} />
