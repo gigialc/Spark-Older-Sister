@@ -5,6 +5,8 @@ import { useState } from "react";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import HomePageOS from './HomePageOS.png';
+// import instagramIcon from './instagramicon.png';
+// import tiktokIcon from './tiktokicon.png';
 
 function Welcome() {
     const [email, setEmail] = useState("");
@@ -79,12 +81,17 @@ function Welcome() {
             <br />
             <br />
 
-            <div className={styles.footer}>
-                <p>© 2024 Older Sister. All rights reserved.</p>
-            </div>
-
+          <div className={styles.footer}>
+          <p>© 2024 Older Sister. All rights reserved.</p>
+          {/* <div className={styles.socialMediaLinks}>
+          <a href="https://www.instagram.com/oldersister" target="_blank" rel="noopener noreferrer">
+              <img src={instagramIcon} alt="Instagram" className={styles.socialMediaIcon} />
+          </a>
+          <a href="https://www.tiktok.com/@oldersister" target="_blank" rel="noopener noreferrer">
+              <img src={tiktokIcon} alt="TikTok" className={styles.socialMediaIcon} />
+          </a> */}
     </div>
-
+</div>
 
   );
 }
