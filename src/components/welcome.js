@@ -40,10 +40,11 @@ function Welcome() {
         <img  src={logo} alt="Older Sister Logo" className={styles.logoImage} />
         <h1 className={styles.logoText}>Older Sister</h1>
       </div>
+      <br />
       <div className={styles.taglines}>
         <span className={styles.tagline}>BEAUTY</span>
         <span className={styles.tagline}>SELF-CARE</span>
-        <span className={styles.tagline}>AI-PERSONALIZED</span>
+        <span className={styles.tagline}>AI-POWERED</span>
       </div>
       <div className={styles.mainText}>
         <h2>Women's Healthcare Information</h2>
@@ -79,7 +80,23 @@ function Welcome() {
                 <img src={HomePageOS} alt="Older Sister Logo" className={styles.phoneImage} />
             </div>
             <br />
+            
+
+          {/* add a section where it says that with a subscription you can have accress to women's healthcare */}
+          <div className={styles.subscriptionSection}>
+                <h2>Premium Package</h2>
+                <h3>$50/month</h3>
+                <ul>
+                    <li>Contraception</li>
+                    <li>Pregnancy care</li>
+                    <li>Skin care...</li>
+                </ul>
+                <button className={styles.subscribeButton} onClick={register}>SUBSCRIBE</button>
+            </div>
+
             <br />
+            <br />
+
 
           <div className={styles.footer}>
           <p>© 2024 Older Sister. All rights reserved.</p>
