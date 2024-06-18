@@ -135,7 +135,7 @@ function Dashboard() {
             component="div"
             sx={{ flexGrow: 1, display: { fontSize: 20 } }}
           >
-            Welcome{'\n'}{username} 🧡
+            Welcome{'\n'}{email} 🧡
           </CustomTypography>
           <p className={styles.welcomeText}>What do you want to learn today?</p>
           <br />
