@@ -13,6 +13,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ArticleIcon from '@mui/icons-material/Article';
 import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
+import Coin from '@mui/icons-material/AccountBalanceWallet';
+import Edit from '@mui/icons-material/Edit';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Paper } from '@mui/material';
 import { useLocation } from 'react-router-dom';
@@ -153,19 +155,19 @@ function NaviBar() {
               <MenuItem onClick={() => handleMenuItemClick('/dashboard')}>
                 <DashboardCustomizeIcon /> Dashboard
               </MenuItem>
-              <MenuItem onClick={() => handleMenuItemClick('/ContributorFeed')}>
+              {/* <MenuItem onClick={() => handleMenuItemClick('/ContributorFeed')}>
                 <DashboardCustomizeIcon /> Contributor Feed
-              </MenuItem>
+              </MenuItem> */}
               <MenuItem onClick={() => handleMenuItemClick('/profile')}>
-                <DashboardCustomizeIcon /> Coin Shop
+                <Coin/> Coin Shop
               </MenuItem>
               <MenuItem onClick={() => handleMenuItemClick('/survey')}>
-                <DashboardCustomizeIcon /> Edit Topics
+                <Edit /> Edit Topics
               </MenuItem>
               <MenuItem onClick={() => handleMenuItemClick('/liked')}>
                 <FavoriteIcon /> Bookmarks
               </MenuItem>
-              <MenuItem onClick={() => handleMenuItemClick('/profile')}>
+              {/* <MenuItem onClick={() => handleMenuItemClick('/profile')}>
                 <ArticleIcon /> Accessibility
               </MenuItem>
               <MenuItem onClick={() => handleMenuItemClick('/profile')}>
@@ -173,7 +175,7 @@ function NaviBar() {
               </MenuItem>
               <MenuItem onClick={() => handleMenuItemClick('/profile')}>
                 <ArticleIcon /> Privacy
-              </MenuItem>
+              </MenuItem> */}
               <MenuItem onClick={() => handleMenuItemClick('/register')}>
                 <LogoutIcon /> Logout
               </MenuItem>
