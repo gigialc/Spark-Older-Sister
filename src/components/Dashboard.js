@@ -27,6 +27,7 @@ const Paper2 = styled(Paper)(({ theme }) => ({
   height: 'auto',
   marginTop: '-5%',
   boxShadow: 'none'
+  
 }));
 
 const CustomTypography = styled(Typography)(({ theme }) => ({
@@ -46,11 +47,13 @@ function Dashboard() {
   const [id, setId] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
   const [quote, setQuote] = useState(null);
+  const [username, setUsername] = useState(null);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
         setEmail(user.email);
+        setUsername(user.username);
         const userDocRef = doc(firestore, "users", user.uid);
         const userDoc = await getDoc(userDocRef);
         if (userDoc.exists()) {
@@ -67,6 +70,20 @@ function Dashboard() {
       }
       return unsubscribe;
     });
+
+    //get the user username
+    const userRef = doc(db, "users", auth.currentUser.uid);
+    getDoc(userRef).then((doc) => {
+      if (doc.exists()) {
+        setUsername(doc.data().username);
+      } else {
+        console.log("No such document!");
+      }
+    }).catch((error) => {
+      console.log("Error getting document:", error);
+    });
+
+
     const fetchArticles = async () => {
       const newContent = [];
       for (const link of links) {
@@ -118,9 +135,12 @@ function Dashboard() {
             component="div"
             sx={{ flexGrow: 1, display: { fontSize: 20 } }}
           >
-            Welcome{'\n'}{email} 🧡
+            Welcome{'\n'}{username} 🧡
           </CustomTypography>
-          <Insights />
+          <p className={styles.welcomeText}>What do you want to learn today?</p>
+          <br />
+
+          {/* <Insights /> */}
           <Paper2>
             <Typography variant="subtext">
               <div id={id}>
@@ -152,9 +172,9 @@ function Dashboard() {
             ))}
           </div>
         </Styled2Paper>
-        <a href="/contributor">
+        {/* <a href="/contributor">
           <button className={styles.contributorBtn}><AddIcon fontSize="large" sx={{color:"white"}} /></button>
-        </a>
+        </a> */}
       </div>
     </main>
   );

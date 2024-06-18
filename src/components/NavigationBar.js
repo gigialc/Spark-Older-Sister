@@ -153,6 +153,9 @@ function NaviBar() {
               <MenuItem onClick={() => handleMenuItemClick('/dashboard')}>
                 <DashboardCustomizeIcon /> Dashboard
               </MenuItem>
+              <MenuItem onClick={() => handleMenuItemClick('/ContributorFeed')}>
+                <DashboardCustomizeIcon /> Contributor Feed
+              </MenuItem>
               <MenuItem onClick={() => handleMenuItemClick('/profile')}>
                 <DashboardCustomizeIcon /> Coin Shop
               </MenuItem>
