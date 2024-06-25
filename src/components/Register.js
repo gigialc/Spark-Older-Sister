@@ -44,10 +44,10 @@ function Register() {
         <div className={styles.container}>
             <div className={styles.logo}>
                 <img src={logo} alt="Older Sister Logo" className={styles.logoImage} />
-                <h1>Older Sister</h1>
+                {/* <h1>Older Sister</h1> */}
             </div>
             <div className={styles.welcome}>
-                <h2>Older Sister</h2>
+                <h2>older sister</h2>
             </div>
             <div className={styles.formContainer}>
                 <form className={styles.form}>

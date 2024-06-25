@@ -18,7 +18,8 @@ const Styled2Paper = styled(Paper)(({ theme }) => ({
   borderRadius: '10px',
   margin: theme.spacing(1),
   boxShadow: 'none',
-  backgroundColor: 'white'
+  backgroundColor: '#f5f5f5'
+
 }));
 
 const Paper2 = styled(Paper)(({ theme }) => ({
@@ -26,7 +27,8 @@ const Paper2 = styled(Paper)(({ theme }) => ({
   width: '100%',
   height: 'auto',
   marginTop: '-5%',
-  boxShadow: 'none'
+  boxShadow: 'none',
+  backgroundColor: '#f5f5f5'
   
 }));
 
