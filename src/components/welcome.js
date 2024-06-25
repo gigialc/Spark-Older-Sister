@@ -8,6 +8,7 @@ import HomePageOS from './HomePageOS.png';
 // import instagramIcon from './instagramicon.png';
 // import tiktokIcon from './tiktokicon.png';
 
+
 function Welcome() {
     const [email, setEmail] = useState("");
 
