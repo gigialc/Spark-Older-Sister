@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import TextField from '@mui/material/TextField';
-import logo from "./OlderSistersvg.svg";
+import logo from "./logo.png";
 import styles from "./styles/Register.module.css";
 
 function Register() {

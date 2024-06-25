@@ -6,7 +6,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore"; // Import Firest
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import styles from "./styles/createAccount.module.css";
-import logo from "./OlderSistersvg.svg"
+import logo from "./logo.png";
 
 function CreateAccount() {
     const [email, setEmail] = useState("");

@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 .container {
@@ -12,7 +12,7 @@ body {
   align-items: center; /* Keep as is if you want other items centered */
   justify-content: flex-start; /* This moves items towards the start (top) */
   min-height: 100vh;
-  background-color: #F8F5F7;
+  background-color: white;
 }
 
 .logo1{
@@ -38,7 +38,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #FFF7E5;
+  background-color: white;
   padding: 20px;
 }
 

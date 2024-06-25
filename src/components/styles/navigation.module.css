@@ -6,7 +6,7 @@ body {
 }
 
 .appBar {
-  background: #FFF7E5;
+  background: white;
   box-shadow: none;
 }
 
@@ -21,7 +21,7 @@ body {
 .header {
   display: flex;
   align-items: center;
-  background-color: #FFF7E5;
+  background-color: white;
   padding: 10px;
   flex-grow: 1;
   text-decoration: none; /* Remove underline */
