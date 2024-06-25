@@ -21,7 +21,7 @@ body {
 .header {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #FFF7E5;
   padding: 10px;
   flex-grow: 1;
   text-decoration: none; /* Remove underline */
