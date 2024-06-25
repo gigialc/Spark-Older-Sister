@@ -132,7 +132,7 @@ function NaviBar() {
           <Toolbar className={styles.toolbar}>
           <Link to="/dashboard" className={styles.header}>
               <img src={logo} alt="Older Sister Logo" className={styles.logoImage} />
-              <h1 className={styles.logoText}>Older Sister</h1>
+              {/* <h1 className={styles.logoText}>Older Sister</h1> */}
             </Link>
             <IconButton
               size="large"
