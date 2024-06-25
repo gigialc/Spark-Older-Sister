@@ -65,7 +65,7 @@ function CreateAccount() {
             <br />
             <div className={styles.logo}>
                 <img src={logo} alt="Older Sister Logo" className={styles.logoImage} />
-                {/* <h1>Older Sister</h1> */}
+                <h1>Older Sister</h1>
             </div>
             <div className={styles.welcome}>
                 <h2>Create Account!</h2>
