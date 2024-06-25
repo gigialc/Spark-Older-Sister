@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import TextField from '@mui/material/TextField';
-import logo from "./logo.png";
+import logo from "./OlderSistersvg.svg";
 import styles from "./styles/Register.module.css";
 
 function Register() {
@@ -44,10 +44,10 @@ function Register() {
         <div className={styles.container}>
             <div className={styles.logo}>
                 <img src={logo} alt="Older Sister Logo" className={styles.logoImage} />
-                <h1>Older Sister</h1>
+                {/* <h1>Older Sister</h1> */}
             </div>
             <div className={styles.welcome}>
-                <h2>Welcome!</h2>
+                <h2>Older Sister</h2>
             </div>
             <div className={styles.formContainer}>
                 <form className={styles.form}>

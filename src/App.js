@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/Register" element = {<Register />} />
+        <Route path="/" element = {<Register />} />
         <Route path="/topics" element = {<Topics/>} />
         {/* <Route path="/register" element = {<Register />} /> */}
         <Route path="/dashboard" element = {<Dashboard />}/>

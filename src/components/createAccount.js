@@ -6,7 +6,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore"; // Import Firest
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import styles from "./styles/createAccount.module.css";
-import logo from "./logo.png";
+import logo from "./OlderSistersvg.svg"
 
 function CreateAccount() {
     const [email, setEmail] = useState("");
@@ -65,7 +65,7 @@ function CreateAccount() {
             <br />
             <div className={styles.logo}>
                 <img src={logo} alt="Older Sister Logo" className={styles.logoImage} />
-                <h1>Older Sister</h1>
+                {/* <h1>Older Sister</h1> */}
             </div>
             <div className={styles.welcome}>
                 <h2>Create Account!</h2>
