@@ -176,7 +176,7 @@ function NaviBar() {
               <MenuItem onClick={() => handleMenuItemClick('/profile')}>
                 <ArticleIcon /> Privacy
               </MenuItem> */}
-              <MenuItem onClick={() => handleMenuItemClick('/register')}>
+              <MenuItem onClick={() => handleMenuItemClick('/')}>
                 <LogoutIcon /> Logout
               </MenuItem>
             </Menu>
